@@ -32,64 +32,139 @@ a:visited { color: black; }
 
 <h2>What is Injection?</h2>
 
-Injection is simple in principle. It can recompile an individual Swift or Objective-C class and is able to bind the new versions of the method implementations of the class into a program while it is running in the simulator - without having to restart it. This avoids having to wait perhaps half a minute to rebuild your entire project and loose your application state when all you want to do is make the smallest change to your code. A typical injection takes about a second.<p>
+Injection is simple in principle. It can recompile an individual Swift or Objective-C class and is able to
+bind the new versions of the method implementations of the class into a program while it is running in the
+simulator - without having to restart it. This avoids having to wait perhaps half a minute to rebuild your
+entire project and loose your application state when all you want to do is make the smallest change to
+your code. A typical injection takes about a second.<p>
 
-Long an <a href="https://github.com/johnno1962/injectionforxcode">Xcode Plugin</a>, with Xcode 8 and its new signing requirements, Injection is now a standalone application that runs in the background while you are editing your code. No changes are need to your project in order to use it. When the injection app is running there is a global hot key "control-=" to inject the file being currently edited in Xcode into the app running in the simulator. This now includes XCTestCase subclasses for which the test will be run.</p>
+Long an <a href="https://github.com/johnno1962/injectionforxcode">Xcode Plugin</a>, with Xcode 8 and its
+new signing requirements, Injection is now a standalone application that runs in the background while you
+are editing your code. No changes are need to your project in order to use it. When the injection app is
+running there is a global hot key "control-=" to inject the file being currently edited in Xcode into the
+app running in the simulator. This now includes XCTestCase subclasses for which the test will be run.</p>
 
 <h2>How does Injection work?</h2>
 
-Injection works by searching through Xcode's ".xcactivity" build log files in "Derived Data" to find the command that was used to compile a class file and runs this then links the resulting object file into a bundle (a wrapped dynamic library) which can be loaded into the application. At this point, a piece of code to load this bundle needs to be injected in a more traditional macOS sense into the program running in the simulator. This is performed by the interprocess communication feature of the machOS which macOS is built on, writing a piece of bootstrap code into the simulator process's memory and starting a new thread to execute it. This code connects back to the injection app through a socket which sends the command to load the bundle prepared just before.<p>
+Injection works by searching through Xcode's ".xcactivity" build log files in "Derived Data" to find the
+command that was used to compile a class file and runs this then links the resulting object file into a
+bundle (a wrapped dynamic library) which can be loaded into the application. At this point, a piece of
+code to load this bundle needs to be injected in a more traditional macOS sense into the program running
+in the simulator. This is performed by the interprocess communication feature of the machOS which macOS
+is built on, writing a piece of bootstrap code into the simulator process's memory and starting a new
+thread to execute it. This code connects back to the injection app through a socket which sends the
+command to load the bundle prepared just before.<p>
 
-This is all by-the-by and the result is there are now two copies of the class that is being injected in memory: the original as compiled by the project build and the new version compiled by the injection build. As all instances in the app are of the original class what is required is to bind the method implementations of the new class onto the old one. In the Objective-C world this was achieved by "Swizzling" - setting a new location for the implementation of a method in the class' meta data using the runtime api. As Swift uses a "vtable" to dispatch methods that are not final, the same can be achieved by simply overwriting the original class' vtable with that of the new class. This means all calls to these methods will be dispatched to their new implementations.</p>
+This is all by-the-by and the result is there are now two copies of the class that is being injected in
+memory: the original as compiled by the project build and the new version compiled by the injection build.
+As all instances in the app are of the original class what is required is to bind the method implementations
+of the new class onto the old one. In the Objective-C world this was achieved by "Swizzling" - setting a new
+location for the implementation of a method in the class' meta data using the runtime api. As Swift uses a
+"vtable" to dispatch methods that are not final, the same can be achieved by simply overwriting the original
+class' vtable with that of the new class. This means all calls to these methods will be dispatched to their
+new implementations.</p>
 
 <p></p>
 
 <h2>How do I know if injection has worked?</h2>
 
-If injection has been able to compile your class, build its bundle and load it you will see a message on the debugging console warning the class has been defined in two places and a message saying to ignore the warning and that the class has been "Swizzled".
+If injection has been able to compile your class, build its bundle and load it you will see a message on
+the debugging console warning the class has been defined in two places and a message saying to ignore the
+warning and that the class has been "Swizzled".
 
 <pre>
     Ignore any warning, Swizzled MasterViewController 0x11be23740 -> 0x10c672070
 </pre>
 
-A frequent support issue at this point is: Why haven't the changes I've applied taken effect on the display? In order to do this the code needs to have been re-executed and the simplest way to do this to is have an instance method "injected()" in your class which calls the code that needs to be re-executed. For example, for a View Controller, it would call viewDidLoad(). Unfortunately, adding this method can't be injected itself in Swift unless it is at the very end of the class definition as the vtable will get out of alignment so you may have to rebuild the project and re-run for your first injection. Also as -injected is a dynamic dispatch from Objective-C code so your class will need to inherit from NSObject.
+A frequent support issue at this point is: Why haven't the changes I've applied taken effect on the display?
+In order to do this the code needs to have been re-executed and the simplest way to do this to is have an
+instance method "injected()" in your class which calls the code that needs to be re-executed. For example,
+for a View Controller, it would call viewDidLoad(). Unfortunately, adding this method can't be injected
+itself in Swift unless it is at the very end of the class definition as the vtable will get out of alignment
+so you may have to rebuild the project and re-run for your first injection.
 
 <h2>What are the limitations of injection?</h2>
 
-In Objective-C, the limitations are relatively few. You have to be mindfull that your new version of the method implementations will be linked against the new version of the class so if there are references to static variables or singletons these will be duplicated. In Swift, the same applies and there are additional gotcha's about whether a method is "direct dispatched" i.e. statically linked rather than dispatched using the vtable of the class object. The three ways Swift is dispatched are discussed in this <a href="https://www.raizlabs.com/dev/2016/12/swift-method-dispatch/">excellent summary</a>. In practice, this means you can not inject methods that have been declared final, are in final classes or are not declared "open" in frameworks which is as good as final with Swift3. This also means you can not inject methods of structs or enums which are direct dispatched as they are not subject to possible subclassing. Injection is also not compatible "whole module optimisation" which can decide a class is final as far as the project is concerned and use direct dispatch at the call site which can not be injected.
+In Objective-C, the limitations are relatively few. You have to be mindfull that your new version of the
+method implementations will be linked against the new version of the class so if there are references to
+static variables or singletons these will be duplicated. In Swift, the same applies and there are additional
+gotcha's about whether a method is "direct dispatched" i.e. statically linked rather than dispatched using
+the vtable of the class object. The three ways Swift is dispatched are discussed in this
+<a href="https://www.raizlabs.com/dev/2016/12/swift-method-dispatch/">excellent summary</a>.
+In practice, this means you can not inject methods that have been declared final, are in final classes
+or are not declared "open" in frameworks which is as good as final with Swift3. This also means you can
+not inject methods of structs or enums which are direct dispatched as they are not subject to possible
+subclassing. Injection is also not compatible "whole module optimisation" which can decide a class is
+final as far as the project is concerned and use direct dispatch at the call site which can not be injected.
 
 <h2>Why isn't my -injected() method being called?</h2>
 
-There are two injected() methods which can be used. A class method +injected() which was easy to implement and is called whenever a class is injected. The instance level -injected() has a few caveats. In order to implement it, injection needs to know all the instances of a class in an application so they can be messaged. To do this injection performs a sweep of all instances starting with the UIApplication object, it's windows and delegate and all objects pointed to by those objects and so forth recursively. As a result, to receive the injected message your object needs to be visible from these seeds (which it generally is.) If not, you can subscribe to the "INJECTION_BUNDLE_NOTIFICATION" in the notification centre and receive a notification with the classes injected.
+There are two injected() methods which can be used. A class method +injected() which was easy to implement
+and is called whenever a class is injected. The instance level -injected() has a few caveats. In order to
+implement it, injection needs to know all the instances of a class in an application so they can be messaged.
+To do this injection performs a sweep of all instances starting with the UIApplication object, it's windows
+and delegate and all objects pointed to by those objects and so forth recursively. As a result, to receive
+the injected message your object needs to be visible from these seeds (which it generally is.) If not, you
+can subscribe to the "INJECTION_BUNDLE_NOTIFICATION" in the notification centre and receive a notification
+with the classes injected. Also as -injected is a dynamic dispatch from Objective-C code so your class will
+need to inherit from NSObject.
 
 <h2>Can I use injection with AppCode?</h2>
 
-Sure, there is a new verison of the AppCode plugin available <a href="https://github.com/johnno1962/InjectionApp">here</a>. This requires the project to have been built in Xcode at some stage to determine the compile commands for a class and that the injection App is running from "/Applications".
+Sure, there is a new verison of the AppCode plugin available
+<a href="https://github.com/johnno1962/InjectionApp">here</a>. This requires the project to have been built
+in Xcode at some stage to determine the compile commands for a class and that the injection App is running
+from "/Applications".
 
 <h2>Why does injection require my administrator password?</h2>
 
-Injecting code between processes as described in the second section above requires administrator privilege and to make this available injection installs a small "Helper" binary into /Library/PrivilegedHelperTools/ which is written to only be capable of injecting bundles into apps running in the simulator. In order to do this it requires the administrator password once - this is a standard macOS mechanism and the password is never known to the injection app. If you're not happy with this you can run using "patched" injection which patches the injection loader into your project's main.m (for a Swift project you'll need to add an empty main.m). This is also used when you're injecting a macOS application - menu item "macOS Project/Patch".
+Injecting code between processes as described in the second section above requires administrator privilege
+and to make this available injection installs a very small (36kb) "Helper" binary into
+/Library/PrivilegedHelperTools/ which is written to only be capable of injecting bundles into apps running
+in the simulator. In order to do this it requires the administrator password once - this is a standard macOS
+mechanism and the password is never known to the injection app. If you're not happy with this you can run
+using "patched" injection which patches the injection loader into your project's main.m (for a Swift project
+you'll need to add an empty main.m). This is also used when you're injecting a macOS application - menu item
+"macOS Project/Patch".
 
 <h2>Where can I get help if injection doesn't work?</h2>
 
-First place to go is the <a href="https://github.com/johnno1962/injectionforxcode">original project</a> and the new <a href="https://github.com/johnno1962/InjectionApp">bug tracking repo</a>. If your problem isn't described there please raise a new issue so I can help debug it with TeamViewer if need be. If you come across anything you feel should be in the FAQ please file a PR on <a href="https://github.com/johnno1962/InjectionApp/blob/master/docs/injectionfaq.html">this document</a>.
+First place to go is the <a href="https://github.com/johnno1962/injectionforxcode">original project</a> and
+the new <a href="https://github.com/johnno1962/InjectionApp">bug tracking repo</a>. If your problem isn't
+described there please raise a new issue so I can help debug it with TeamViewer if need be. If you come
+across anything you feel should be in the FAQ please file a PR on
+<a href="https://github.com/johnno1962/InjectionApp/blob/master/docs/injectionfaq.html">this document</a>.
 
 <h2>What is the current injection license?</h2>
 
-The code in the injection plugin has been licensed to the new InjectionApp under it's own very general terms which are currently described in the App's "About Injection" panel for the beta period. Depending on interest it may have new a license if it becomes a full fledged product.
+The code in the injection plugin has been licensed to the new InjectionApp under it's own very general terms
+which are currently described in the App's "About Injection" panel for the beta period. Depending on
+interest it may have new a license if it becomes a full fledged product.
 
 <h2>What else can the Injection application do?</h2>
 
-Included in the injection application is pretty much all of my Open Source developer tools. Included is the
-<a href="https://github.com/johnno1962/RefactoratorApp">Refactorator</a> also a previous plugin that can be used to refactor (rename objects in) Swift and Objective-C sources. Select an object in the Xcode editor and use the Menu Bar item "Refactor Swift" and a window will open showing all places in the code that object is referrenced. Enter a new value into the "Rename To:" text field and press apply and it will apply the changes in memeory then click "Save" to make the changes on disk and build to check the project still compiles. You can revert the changes if need be.<p>
+Included in the injection application is pretty much all of my Open Source developer tools. Included is
+the <a href="https://github.com/johnno1962/RefactoratorApp">Refactorator</a> also a previous plugin that
+can be used to refactor (rename objects in) Swift and Objective-C sources. Select an object in the Xcode
+editor and use the Menu Bar item "Refactor Swift" and a window will open showing all places in the code that
+object is referrenced. Enter a new value into the "Rename To:" text field and press apply and it will apply
+the changes in memeory then click "Save" to make the changes on disk and build to check the project still
+compiles. You can revert the changes if need be.<p>
 
 <center><img src="http://johnholdsworth.com/refactorator2.gif"/></center><p>
 
-Also included is the <a href="https://github.com/johnno1962/Xprobe">Xprobe memory browser</a> which uses the result of a sweep of your application's objects to display them in a Web interface. This allows you to inspect values for all instance variables and set them for Objective-C instances. It also allows you to evaluate code against an instance without having to stop your program using a breakpoint.</p>
+Also included is the <a href="https://github.com/johnno1962/Xprobe">Xprobe memory browser</a> which uses
+the result of a sweep of your application's objects to display them in a Web interface. This allows you
+to inspect values for all instance variables and set them for Objective-C instances. It also allows you
+to evaluate code against an instance without having to stop your program using a breakpoint.</p>
 
 <center><img src="http://johnholdsworth.com/mirror4.gif"/></center><p>
 
-Finally, though it requires patching your project to use, <a href="https://github.com/johnno1962/Remote">Remote Control</a> is included which allows you to control an iDeivce from your computer if that's more convenient or for End-to-End testing. Some events require an initial tap on the device to capture an event that can be used to forge other events but it generally works quite well.</p>
+Finally, though it requires patching your project to use,
+<a href="https://github.com/johnno1962/Remote">Remote Control</a> is included which allows you to control
+an iDeivce from your computer if that's more convenient or for End-to-End testing. Some events require an
+initial tap on the device to capture an event that can be used to forge other events but it generally
+works quite well.</p>
 
 <center><img src="http://injectionforxcode.johnholdsworth.com/remote.gif"/></center>
 <td width="12%">

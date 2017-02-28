@@ -160,11 +160,19 @@ to evaluate code against an instance without having to stop your program using a
 
 <center><img src="http://johnholdsworth.com/mirror4.gif"/></center><p>
 
+You can instrument your project's compile times if you add "-Xfrontend -debug-time-function-bodies" to
+"Other Swift Flags" in it's project settings and rebuild. Then, use the "Optimise Build" menu item to
+view a summary of the longest build times by function with a link to take you to that place in the source.
+
+<center><img src="http://johnholdsworth.com/optimiser.png"/></center><p>
+
 Finally, though it requires patching your project to use,
 <a href="https://github.com/johnno1962/Remote">Remote Control</a> is included which allows you to control
 an iDeivce from your computer if that's more convenient or for End-to-End testing. Some events require an
 initial tap on the device to capture an event that can be used to forge other events but it generally
 works quite well.</p>
+
+
 
 <center><img src="http://injectionforxcode.johnholdsworth.com/remote.gif"/></center>
 <td width="12%">

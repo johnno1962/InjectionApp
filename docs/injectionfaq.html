@@ -125,7 +125,11 @@ in the simulator. In order to do this it requires the administrator password onc
 mechanism and the password is never known to the injection app. If you're not happy with this you can run
 using "patched" injection which patches the injection loader into your project's main.m (for a Swift project
 you'll need to add an empty main.m). This is also used when you're injecting a macOS application - menu item
-"macOS Project/Patch".
+"macOS Project/Patch".<p>
+
+A new feature if you're using patched injection is that if you use "Project/Perform Action/Run without
+building" injection remembers your previous injections and re-apply them when you start the app. This is a
+way to avoid a potentially slow re-link of your entire app when you've only changed a class or two.
 
 <h2>Where can I get help if injection doesn't work?</h2>
 

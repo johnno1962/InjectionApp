@@ -1,0 +1,72 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A535CCAD0622E97CAD9CF9E1E3C6AC64A6475A1F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "BABDEDA06CCA87E16844780F7D9DC681C475B08E" : 9223372036854775807,
+    "712D06E9AA7CE78ACFCEF81F916D46A7554837CA" : 9223372036854775807,
+    "34B8D32F162DAA64534774A997241F23597C24C7" : 9223372036854775807,
+    "3BB2D680EE898F051A0A693863548EC14D1896A2" : 9223372036854775807,
+    "1AC0D0FAF96863B8F1FFA7F31C9B03B84CBC01CB" : 9223372036854775807,
+    "A535CCAD0622E97CAD9CF9E1E3C6AC64A6475A1F" : 9223372036854775807,
+    "58DA89050E62AAF43BB0850208A8C8A005491B18" : 9223372036854775807,
+    "C62EC6336D5E5301D1CBDB1406DC28E8A62B5BDC" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C63B3622-B7F9-45F3-ACA1-7509748DE8FF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "BABDEDA06CCA87E16844780F7D9DC681C475B08E" : "DDHotKey\/",
+    "712D06E9AA7CE78ACFCEF81F916D46A7554837CA" : "injectionforxcode\/",
+    "34B8D32F162DAA64534774A997241F23597C24C7" : "RefactoratorApp\/",
+    "3BB2D680EE898F051A0A693863548EC14D1896A2" : "Smuggler\/",
+    "1AC0D0FAF96863B8F1FFA7F31C9B03B84CBC01CB" : "Remote\/",
+    "A535CCAD0622E97CAD9CF9E1E3C6AC64A6475A1F" : "Injectorator\/",
+    "58DA89050E62AAF43BB0850208A8C8A005491B18" : "XprobePlugin\/",
+    "C62EC6336D5E5301D1CBDB1406DC28E8A62B5BDC" : "Refactorator\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Injectorator",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Injectorator.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/Remote.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1AC0D0FAF96863B8F1FFA7F31C9B03B84CBC01CB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/RefactoratorApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "34B8D32F162DAA64534774A997241F23597C24C7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/Smuggler.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3BB2D680EE898F051A0A693863548EC14D1896A2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/XprobePlugin.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "58DA89050E62AAF43BB0850208A8C8A005491B18"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/injectionforxcode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "712D06E9AA7CE78ACFCEF81F916D46A7554837CA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/InjectionApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A535CCAD0622E97CAD9CF9E1E3C6AC64A6475A1F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/davedelong\/DDHotKey.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BABDEDA06CCA87E16844780F7D9DC681C475B08E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/johnno1962\/Refactorator.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C62EC6336D5E5301D1CBDB1406DC28E8A62B5BDC"
+    }
+  ]
+}

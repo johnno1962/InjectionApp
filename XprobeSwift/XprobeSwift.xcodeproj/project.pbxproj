@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB356BB51E0B8F090056B10F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB356BB41E0B8F090056B10F /* Info.plist */; };
+		BB356BB81E0B8F600056B10F /* XprobeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356BB71E0B8F600056B10F /* XprobeSwift.swift */; };
+		BB356BBD1E0B8FA10056B10F /* SwiftTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356BBA1E0B8FA10056B10F /* SwiftTrace.m */; };
+		BB356BBE1E0B8FA10056B10F /* SwiftTrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356BBB1E0B8FA10056B10F /* SwiftTrace.swift */; };
+		BB356BBF1E0B8FA10056B10F /* xt_forwarding_trampoline_x64.s in Sources */ = {isa = PBXBuildFile; fileRef = BB356BBC1E0B8FA10056B10F /* xt_forwarding_trampoline_x64.s */; };
+		BB356BED1E0C91C80056B10F /* Internals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356BEC1E0C91C80056B10F /* Internals.swift */; };
+		BB5133171E1AE34900C11990 /* SwiftSwizzler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5133161E1AE34900C11990 /* SwiftSwizzler.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB356BA51E0B8E930056B10F /* XprobeSwift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XprobeSwift.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356BB41E0B8F090056B10F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB356BB61E0B8F5F0056B10F /* XprobeSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XprobeSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB356BB71E0B8F600056B10F /* XprobeSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = XprobeSwift.swift; path = ../../XprobePlugin/XprobeSwift/XprobeSwift/XprobeSwift.swift; sourceTree = "<group>"; };
+		BB356BB91E0B8FA10056B10F /* SwiftTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwiftTrace.h; path = ../../Smuggler/SwiftTrace/SwiftTrace/SwiftTrace.h; sourceTree = "<group>"; };
+		BB356BBA1E0B8FA10056B10F /* SwiftTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwiftTrace.m; path = ../../Smuggler/SwiftTrace/SwiftTrace/SwiftTrace.m; sourceTree = "<group>"; };
+		BB356BBB1E0B8FA10056B10F /* SwiftTrace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftTrace.swift; path = ../../Smuggler/SwiftTrace/SwiftTrace/SwiftTrace.swift; sourceTree = "<group>"; };
+		BB356BBC1E0B8FA10056B10F /* xt_forwarding_trampoline_x64.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; name = xt_forwarding_trampoline_x64.s; path = ../../Smuggler/SwiftTrace/SwiftTrace/xt_forwarding_trampoline_x64.s; sourceTree = "<group>"; };
+		BB356BEC1E0C91C80056B10F /* Internals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Internals.swift; path = ../../XprobePlugin/XprobeSwift/XprobeSwift/Internals.swift; sourceTree = "<group>"; };
+		BB5133161E1AE34900C11990 /* SwiftSwizzler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftSwizzler.swift; path = ../../XprobePlugin/XprobeSwift/XprobeSwift/SwiftSwizzler.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB356BA21E0B8E930056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB356B9C1E0B8E930056B10F = {
+			isa = PBXGroup;
+			children = (
+				BB356BB91E0B8FA10056B10F /* SwiftTrace.h */,
+				BB356BBA1E0B8FA10056B10F /* SwiftTrace.m */,
+				BB356BEC1E0C91C80056B10F /* Internals.swift */,
+				BB356BBB1E0B8FA10056B10F /* SwiftTrace.swift */,
+				BB356BB71E0B8F600056B10F /* XprobeSwift.swift */,
+				BB5133161E1AE34900C11990 /* SwiftSwizzler.swift */,
+				BB356BBC1E0B8FA10056B10F /* xt_forwarding_trampoline_x64.s */,
+				BB356BB61E0B8F5F0056B10F /* XprobeSwift-Bridging-Header.h */,
+				BB356BB41E0B8F090056B10F /* Info.plist */,
+				BB356BA61E0B8E930056B10F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB356BA61E0B8E930056B10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB356BA51E0B8E930056B10F /* XprobeSwift.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB356BA41E0B8E930056B10F /* XprobeSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356BAB1E0B8E930056B10F /* Build configuration list for PBXNativeTarget "XprobeSwift" */;
+			buildPhases = (
+				BB356BA11E0B8E930056B10F /* Sources */,
+				BB356BA21E0B8E930056B10F /* Frameworks */,
+				BB356BA31E0B8E930056B10F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XprobeSwift;
+			productName = XprobeSwift;
+			productReference = BB356BA51E0B8E930056B10F /* XprobeSwift.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB356B9D1E0B8E930056B10F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "John Holdsworth";
+				TargetAttributes = {
+					BB356BA41E0B8E930056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = BB356BA01E0B8E930056B10F /* Build configuration list for PBXProject "XprobeSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB356B9C1E0B8E930056B10F;
+			productRefGroup = BB356BA61E0B8E930056B10F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB356BA41E0B8E930056B10F /* XprobeSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB356BA31E0B8E930056B10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356BB51E0B8F090056B10F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB356BA11E0B8E930056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356BED1E0C91C80056B10F /* Internals.swift in Sources */,
+				BB356BBF1E0B8FA10056B10F /* xt_forwarding_trampoline_x64.s in Sources */,
+				BB356BB81E0B8F600056B10F /* XprobeSwift.swift in Sources */,
+				BB5133171E1AE34900C11990 /* SwiftSwizzler.swift in Sources */,
+				BB356BBE1E0B8FA10056B10F /* SwiftTrace.swift in Sources */,
+				BB356BBD1E0B8FA10056B10F /* SwiftTrace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BB356BA91E0B8E930056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB356BAA1E0B8E930056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		BB356BAC1E0B8E930056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.XprobeSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "XprobeSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BB356BAD1E0B8E930056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-undefined",
+					dynamic_lookup,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.XprobeSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "XprobeSwift-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.0;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB356BA01E0B8E930056B10F /* Build configuration list for PBXProject "XprobeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356BA91E0B8E930056B10F /* Debug */,
+				BB356BAA1E0B8E930056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356BAB1E0B8E930056B10F /* Build configuration list for PBXNativeTarget "XprobeSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356BAC1E0B8E930056B10F /* Debug */,
+				BB356BAD1E0B8E930056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB356B9D1E0B8E930056B10F /* Project object */;
+}

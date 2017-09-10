@@ -1,0 +1,1348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB010BD91E1F3A0B00C3AACA /* iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = BB010BD41E1F3A0B00C3AACA /* iphone.png */; };
+		BB010BDA1E1F3A0B00C3AACA /* log.html in Resources */ = {isa = PBXBuildFile; fileRef = BB010BD51E1F3A0B00C3AACA /* log.html */; };
+		BB010BDC1E1F3A0B00C3AACA /* patch.py in Resources */ = {isa = PBXBuildFile; fileRef = BB010BD71E1F3A0B00C3AACA /* patch.py */; };
+		BB010BDD1E1F3A0B00C3AACA /* unpatch.py in Resources */ = {isa = PBXBuildFile; fileRef = BB010BD81E1F3A0B00C3AACA /* unpatch.py */; };
+		BB010BDE1E1F3A5600C3AACA /* RemoteCapture.h in Resources */ = {isa = PBXBuildFile; fileRef = BB010BCC1E1F39E800C3AACA /* RemoteCapture.h */; };
+		BB010BDF1E1F3A5600C3AACA /* RemoteHeaders.h in Resources */ = {isa = PBXBuildFile; fileRef = BB010BCD1E1F39E800C3AACA /* RemoteHeaders.h */; };
+		BB010BE01E1F3C2300C3AACA /* RMPluginController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB010BC11E1F39E800C3AACA /* RMPluginController.m */; };
+		BB010BE11E1F3C2300C3AACA /* RMWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB010BC41E1F39E800C3AACA /* RMWindowController.m */; };
+		BB010BE21E1F3C2300C3AACA /* RMMacroManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BB010BC71E1F39E800C3AACA /* RMMacroManager.m */; };
+		BB010BE31E1F3C2300C3AACA /* RMDeviceController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB010BC91E1F39E800C3AACA /* RMDeviceController.m */; };
+		BB010BE41E1F3C2300C3AACA /* RMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB010BCB1E1F39E800C3AACA /* RMImageView.m */; };
+		BB010BE61E1F3D5A00C3AACA /* RMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB010BE51E1F3D5A00C3AACA /* RMController.swift */; };
+		BB010BE71E1F437C00C3AACA /* RMPluginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB010BC21E1F39E800C3AACA /* RMPluginController.xib */; };
+		BB010BE81E1F437C00C3AACA /* RMWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB010BC51E1F39E800C3AACA /* RMWindowController.xib */; };
+		BB010C0F1E1F85FF00C3AACA /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB010C0E1E1F85FF00C3AACA /* QTKit.framework */; };
+		BB20D57A1E1F98640013C59F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = BB7D5F0D1E15B94200393CA1 /* README.md */; };
+		BB248A941E210FCC003F0DF6 /* Benchmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB248A921E210E2F003F0DF6 /* Benchmark.swift */; };
+		BB25263E1F65CC9700898347 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BB25263D1F65CC9700898347 /* LICENSE */; };
+		BB356A531E0AF2780056B10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB356A521E0AF2780056B10F /* Assets.xcassets */; };
+		BB356A631E0AF2AD0056B10F /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A5E1E0AF2AD0056B10F /* AppController.swift */; };
+		BB356A641E0AF2AD0056B10F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A5F1E0AF2AD0056B10F /* AppDelegate.swift */; };
+		BB356A651E0AF2AD0056B10F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A601E0AF2AD0056B10F /* Common.swift */; };
+		BB356A661E0AF2AD0056B10F /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A611E0AF2AD0056B10F /* Formatter.swift */; };
+		BB356A671E0AF2AD0056B10F /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A621E0AF2AD0056B10F /* Project.swift */; };
+		BB356A701E0AF2E20056B10F /* ByteRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A681E0AF2E20056B10F /* ByteRegex.swift */; };
+		BB356A711E0AF2E20056B10F /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A691E0AF2E20056B10F /* Entity.swift */; };
+		BB356A721E0AF2E20056B10F /* IndexDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A6A1E0AF2E20056B10F /* IndexDB.swift */; };
+		BB356A731E0AF2E20056B10F /* IndexStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A6B1E0AF2E20056B10F /* IndexStrings.swift */; };
+		BB356A741E0AF2E20056B10F /* LineGenerators.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A6C1E0AF2E20056B10F /* LineGenerators.swift */; };
+		BB356A751E0AF2E20056B10F /* LogParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A6D1E0AF2E20056B10F /* LogParser.swift */; };
+		BB356A761E0AF2E20056B10F /* SourceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356A6E1E0AF2E20056B10F /* SourceKit.swift */; };
+		BB356A7B1E0AF36F0056B10F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB356A791E0AF36E0056B10F /* MainMenu.xib */; };
+		BB356A801E0AF37A0056B10F /* Source.html in Resources */ = {isa = PBXBuildFile; fileRef = BB356A7C1E0AF37A0056B10F /* Source.html */; };
+		BB356A811E0AF37A0056B10F /* canviz.html in Resources */ = {isa = PBXBuildFile; fileRef = BB356A7D1E0AF37A0056B10F /* canviz.html */; };
+		BB356A821E0AF37A0056B10F /* canviz2.html in Resources */ = {isa = PBXBuildFile; fileRef = BB356A7E1E0AF37A0056B10F /* canviz2.html */; };
+		BB356A831E0AF37A0056B10F /* Intro.html in Resources */ = {isa = PBXBuildFile; fileRef = BB356A7F1E0AF37A0056B10F /* Intro.html */; };
+		BB356A851E0AF3910056B10F /* canviz-0.1 in Resources */ = {isa = PBXBuildFile; fileRef = BB356A841E0AF3910056B10F /* canviz-0.1 */; };
+		BB356A881E0AF3E10056B10F /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356A871E0AF3E10056B10F /* Utils.m */; };
+		BB356A8B1E0AF40B0056B10F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB356A8A1E0AF40B0056B10F /* libsqlite3.tbd */; };
+		BB356A8C1E0AF42A0056B10F /* Xcode.h in Resources */ = {isa = PBXBuildFile; fileRef = BB356A771E0AF30B0056B10F /* Xcode.h */; };
+		BB356A8E1E0AF4890056B10F /* App.icns in Resources */ = {isa = PBXBuildFile; fileRef = BB356A8D1E0AF4890056B10F /* App.icns */; };
+		BB356A901E0AF4AC0056B10F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB356A8F1E0AF4AC0056B10F /* WebKit.framework */; };
+		BB356A9F1E0AF6BB0056B10F /* XprobeConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356A9A1E0AF6BB0056B10F /* XprobeConsole.m */; };
+		BB356AA01E0AF6BB0056B10F /* XprobeConsole.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB356A9B1E0AF6BB0056B10F /* XprobeConsole.xib */; };
+		BB356AA11E0AF6BB0056B10F /* XprobePluginMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356A9D1E0AF6BB0056B10F /* XprobePluginMenuController.m */; };
+		BB356AA21E0AF6BB0056B10F /* XprobePluginMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB356A9E1E0AF6BB0056B10F /* XprobePluginMenuController.xib */; };
+		BB356AAE1E0AF6D80056B10F /* INPluginMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356AA41E0AF6D80056B10F /* INPluginMenuController.m */; };
+		BB356AAF1E0AF6D80056B10F /* INPluginMenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB356AA51E0AF6D80056B10F /* INPluginMenuController.xib */; };
+		BB356AB01E0AF6D80056B10F /* INPluginClientController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356AA71E0AF6D80056B10F /* INPluginClientController.m */; };
+		BB356AB11E0AF6D80056B10F /* FileWatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356AA91E0AF6D80056B10F /* FileWatcher.m */; };
+		BB356AB71E0AF7F40056B10F /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356AB31E0AF7F40056B10F /* Xtrace.mm */; };
+		BB356AB81E0AF7F40056B10F /* Xprobe.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356AB51E0AF7F40056B10F /* Xprobe.mm */; };
+		BB356AB91E0AF7F40056B10F /* Xprobe+Service.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356AB61E0AF7F40056B10F /* Xprobe+Service.mm */; };
+		BB356ABB1E0AF8130056B10F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB356ABA1E0AF8130056B10F /* libz.tbd */; };
+		BB356ABD1E0B03220056B10F /* injection.png in Resources */ = {isa = PBXBuildFile; fileRef = BB356ABC1E0B03220056B10F /* injection.png */; };
+		BB356AE21E0B09610056B10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356ADD1E0B09610056B10F /* main.m */; };
+		BB356AE31E0B09610056B10F /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356ADF1E0B09610056B10F /* Helper.m */; };
+		BB356AE41E0B09610056B10F /* mach_inject.c in Sources */ = {isa = PBXBuildFile; fileRef = BB356AE11E0B09610056B10F /* mach_inject.c */; };
+		BB356B041E0B0BA20056B10F /* mach_inject_bundle_stub.c in Sources */ = {isa = PBXBuildFile; fileRef = BB356B031E0B0BA20056B10F /* mach_inject_bundle_stub.c */; };
+		BB356B051E0B0BC40056B10F /* Bootstrap.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BB356AFC1E0B0B8A0056B10F /* Bootstrap.bundle */; };
+		BB356B0C1E0B0D0A0056B10F /* HelperInstaller.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356B091E0B0D0A0056B10F /* HelperInstaller.m */; };
+		BB356B0D1E0B0D0A0056B10F /* HelperProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356B0B1E0B0D0A0056B10F /* HelperProxy.m */; };
+		BB356B131E0B0E680056B10F /* InjectionOK.tif in Resources */ = {isa = PBXBuildFile; fileRef = BB356B121E0B0E680056B10F /* InjectionOK.tif */; };
+		BB356B7C1E0B4A9A0056B10F /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BB356B7B1E0B4A9A0056B10F /* Credits.rtf */; };
+		BB356B7E1E0B542F0056B10F /* com.johnholdsworth.Injectorator.Helper in CopyFiles */ = {isa = PBXBuildFile; fileRef = BB356AD61E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		BB356B851E0B5A500056B10F /* InjectionIdle.tif in Resources */ = {isa = PBXBuildFile; fileRef = BB356B841E0B5A500056B10F /* InjectionIdle.tif */; };
+		BB356B871E0B5D450056B10F /* INController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356B861E0B5D450056B10F /* INController.swift */; };
+		BB356B891E0B72270056B10F /* common.pm in Resources */ = {isa = PBXBuildFile; fileRef = BB356B881E0B72270056B10F /* common.pm */; };
+		BB356B8C1E0B72890056B10F /* iOSBundleTemplate in Resources */ = {isa = PBXBuildFile; fileRef = BB356B8A1E0B72890056B10F /* iOSBundleTemplate */; };
+		BB356B8D1E0B72890056B10F /* OSXBundleTemplate in Resources */ = {isa = PBXBuildFile; fileRef = BB356B8B1E0B72890056B10F /* OSXBundleTemplate */; };
+		BB356B8E1E0B747B0056B10F /* BundleInterface.h in Resources */ = {isa = PBXBuildFile; fileRef = BB356AAA1E0AF6D80056B10F /* BundleInterface.h */; };
+		BB356B8F1E0B747B0056B10F /* BundleInjection.h in Resources */ = {isa = PBXBuildFile; fileRef = BB356AAB1E0AF6D80056B10F /* BundleInjection.h */; };
+		BB356B911E0B75030056B10F /* injectSource.pl in Resources */ = {isa = PBXBuildFile; fileRef = BB356B901E0B75030056B10F /* injectSource.pl */; };
+		BB356B981E0B8A7F0056B10F /* xprobe.html in Resources */ = {isa = PBXBuildFile; fileRef = BB356B961E0B8A7F0056B10F /* xprobe.html */; };
+		BB356B991E0B8A7F0056B10F /* tiny_red.gif in Resources */ = {isa = PBXBuildFile; fileRef = BB356B971E0B8A7F0056B10F /* tiny_red.gif */; };
+		BB356B9B1E0B8B0D0056B10F /* CodeMirror in Resources */ = {isa = PBXBuildFile; fileRef = BB356B9A1E0B8B0D0056B10F /* CodeMirror */; };
+		BB356BC51E0B976E0056B10F /* evalCode.pl in Resources */ = {isa = PBXBuildFile; fileRef = BB356BC41E0B976E0056B10F /* evalCode.pl */; };
+		BB356BD41E0C4C0F0056B10F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB356BD31E0C4C0F0056B10F /* main.m */; };
+		BB356BDA1E0C4C2A0056B10F /* injectSource in Resources */ = {isa = PBXBuildFile; fileRef = BB356BD11E0C4C0E0056B10F /* injectSource */; };
+		BB356BE31E0C761E0056B10F /* Integration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB356BDF1E0C758F0056B10F /* Integration.swift */; };
+		BB356C041E0D9FC20056B10F /* Integration.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB356C001E0D9B410056B10F /* Integration.xib */; };
+		BB356C071E0DA11C0056B10F /* patchProject.pl in Resources */ = {isa = PBXBuildFile; fileRef = BB356C051E0DA0E40056B10F /* patchProject.pl */; };
+		BB356C091E0DA37C0056B10F /* revertProject.pl in Resources */ = {isa = PBXBuildFile; fileRef = BB356C081E0DA37C0056B10F /* revertProject.pl */; };
+		BB356C311E0DA78B0056B10F /* BundleSweeper.h in Resources */ = {isa = PBXBuildFile; fileRef = BB356AAC1E0AF6D80056B10F /* BundleSweeper.h */; };
+		BB356C321E0DA7970056B10F /* IvarAccess.h in Resources */ = {isa = PBXBuildFile; fileRef = BB356AAD1E0AF6D80056B10F /* IvarAccess.h */; };
+		BB4847C01E380E1000622FA4 /* DDHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4847BD1E380E1000622FA4 /* DDHotKeyCenter.m */; };
+		BB4847C11E380E1000622FA4 /* DDHotKeyUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BB4847BF1E380E1000622FA4 /* DDHotKeyUtilities.m */; };
+		BB4847C81E38155D00622FA4 /* DDHotKeyCenter.h in Resources */ = {isa = PBXBuildFile; fileRef = BB4847BC1E380E1000622FA4 /* DDHotKeyCenter.h */; };
+		BB5A60A31E221EA600B6C1D9 /* closed_folder_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5A609E1E221EA600B6C1D9 /* closed_folder_orange.png */; };
+		BB5A60A41E221EA600B6C1D9 /* open_folder_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5A609F1E221EA600B6C1D9 /* open_folder_orange.png */; };
+		BB5A60A51E221EA600B6C1D9 /* document.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60A01E221EA600B6C1D9 /* document.png */; };
+		BB5A60A61E221EA600B6C1D9 /* scan2.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60A11E221EA600B6C1D9 /* scan2.png */; };
+		BB5A60A71E221EA600B6C1D9 /* scan.png in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60A21E221EA600B6C1D9 /* scan.png */; };
+		BB5A60AB1E221EB400B6C1D9 /* DiskTreeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB5A60A91E221EB400B6C1D9 /* DiskTreeAppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BB5A60B31E221F5C00B6C1D9 /* DiskTree.html in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60B11E221F5C00B6C1D9 /* DiskTree.html */; };
+		BB5A60B41E221F5C00B6C1D9 /* DiskTree.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60B21E221F5C00B6C1D9 /* DiskTree.xib */; };
+		BB5A60C81E22220B00B6C1D9 /* tree.c in Sources */ = {isa = PBXBuildFile; fileRef = BB5A60C61E2221EC00B6C1D9 /* tree.c */; };
+		BB6528321E698C4100B8FB95 /* coverage.rb in Resources */ = {isa = PBXBuildFile; fileRef = BB6528301E698C4100B8FB95 /* coverage.rb */; };
+		BB6528331E698C4100B8FB95 /* Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6528311E698C4100B8FB95 /* Coverage.swift */; };
+		BBCE04D81E0E16350097E1E6 /* openBundle.pl in Resources */ = {isa = PBXBuildFile; fileRef = BBCE04D71E0E16350097E1E6 /* openBundle.pl */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB356AEA1E0B09F60056B10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB356A451E0AF2780056B10F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB356AD51E0B09000056B10F;
+			remoteInfo = com.johnholdsworth.Injectorator.Helper;
+		};
+		BB356B061E0B0BCE0056B10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB356A451E0AF2780056B10F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB356AFB1E0B0B8A0056B10F;
+			remoteInfo = InjectionBootstrap;
+		};
+		BB356B601E0B184D0056B10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB356B5C1E0B184C0056B10F /* InjectionLoader.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BB356B531E0B184C0056B10F;
+			remoteInfo = InjectionLoader;
+		};
+		BB356BB21E0B8E940056B10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB356BAE1E0B8E930056B10F /* XprobeSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BB356BA51E0B8E930056B10F;
+			remoteInfo = XprobeSwift;
+		};
+		BB356BD81E0C4C1B0056B10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB356A451E0AF2780056B10F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB356BD01E0C4C0E0056B10F;
+			remoteInfo = injectSource;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BB356AD41E0B09000056B10F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		BB356B7D1E0B54240056B10F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				BB356B7E1E0B542F0056B10F /* com.johnholdsworth.Injectorator.Helper in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356BCF1E0C4C0E0056B10F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		BB5A60B71E22211900B6C1D9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BB010BC01E1F39E800C3AACA /* RMPluginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMPluginController.h; path = ../Remote/Classes/RMPluginController.h; sourceTree = "<group>"; };
+		BB010BC11E1F39E800C3AACA /* RMPluginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMPluginController.m; path = ../Remote/Classes/RMPluginController.m; sourceTree = "<group>"; };
+		BB010BC21E1F39E800C3AACA /* RMPluginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMPluginController.xib; path = ../Remote/Classes/RMPluginController.xib; sourceTree = "<group>"; };
+		BB010BC31E1F39E800C3AACA /* RMWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMWindowController.h; path = ../Remote/Classes/RMWindowController.h; sourceTree = "<group>"; };
+		BB010BC41E1F39E800C3AACA /* RMWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMWindowController.m; path = ../Remote/Classes/RMWindowController.m; sourceTree = "<group>"; };
+		BB010BC51E1F39E800C3AACA /* RMWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RMWindowController.xib; path = ../Remote/Classes/RMWindowController.xib; sourceTree = "<group>"; };
+		BB010BC61E1F39E800C3AACA /* RMMacroManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMMacroManager.h; path = ../Remote/Classes/RMMacroManager.h; sourceTree = "<group>"; };
+		BB010BC71E1F39E800C3AACA /* RMMacroManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMMacroManager.m; path = ../Remote/Classes/RMMacroManager.m; sourceTree = "<group>"; };
+		BB010BC81E1F39E800C3AACA /* RMDeviceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMDeviceController.h; path = ../Remote/Classes/RMDeviceController.h; sourceTree = "<group>"; };
+		BB010BC91E1F39E800C3AACA /* RMDeviceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMDeviceController.m; path = ../Remote/Classes/RMDeviceController.m; sourceTree = "<group>"; };
+		BB010BCA1E1F39E800C3AACA /* RMImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RMImageView.h; path = ../Remote/Classes/RMImageView.h; sourceTree = "<group>"; };
+		BB010BCB1E1F39E800C3AACA /* RMImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RMImageView.m; path = ../Remote/Classes/RMImageView.m; sourceTree = "<group>"; };
+		BB010BCC1E1F39E800C3AACA /* RemoteCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteCapture.h; path = ../Remote/Classes/RemoteCapture.h; sourceTree = "<group>"; };
+		BB010BCD1E1F39E800C3AACA /* RemoteHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteHeaders.h; path = ../Remote/Classes/RemoteHeaders.h; sourceTree = "<group>"; };
+		BB010BD41E1F3A0B00C3AACA /* iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iphone.png; path = ../Remote/iphone.png; sourceTree = "<group>"; };
+		BB010BD51E1F3A0B00C3AACA /* log.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = log.html; path = ../Remote/log.html; sourceTree = "<group>"; };
+		BB010BD71E1F3A0B00C3AACA /* patch.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = patch.py; path = ../Remote/patch.py; sourceTree = "<group>"; };
+		BB010BD81E1F3A0B00C3AACA /* unpatch.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = unpatch.py; path = ../Remote/unpatch.py; sourceTree = "<group>"; };
+		BB010BE51E1F3D5A00C3AACA /* RMController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMController.swift; sourceTree = "<group>"; };
+		BB010C0E1E1F85FF00C3AACA /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = System/Library/Frameworks/QTKit.framework; sourceTree = SDKROOT; };
+		BB248A921E210E2F003F0DF6 /* Benchmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Benchmark.swift; sourceTree = "<group>"; };
+		BB25263D1F65CC9700898347 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BB356A4D1E0AF2780056B10F /* Injection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356A521E0AF2780056B10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB356A571E0AF2780056B10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB356A5D1E0AF2AC0056B10F /* Injectorator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Injectorator-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB356A5E1E0AF2AD0056B10F /* AppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppController.swift; path = ../../RefactoratorApp/Refactorator/AppController.swift; sourceTree = "<group>"; };
+		BB356A5F1E0AF2AD0056B10F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../RefactoratorApp/Refactorator/AppDelegate.swift; sourceTree = "<group>"; };
+		BB356A601E0AF2AD0056B10F /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = ../../RefactoratorApp/Refactorator/Common.swift; sourceTree = "<group>"; };
+		BB356A611E0AF2AD0056B10F /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Formatter.swift; path = ../../RefactoratorApp/Refactorator/Formatter.swift; sourceTree = "<group>"; };
+		BB356A621E0AF2AD0056B10F /* Project.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Project.swift; path = ../../RefactoratorApp/Refactorator/Project.swift; sourceTree = "<group>"; };
+		BB356A681E0AF2E20056B10F /* ByteRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ByteRegex.swift; path = ../../Refactorator/refactord/ByteRegex.swift; sourceTree = "<group>"; };
+		BB356A691E0AF2E20056B10F /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Entity.swift; path = ../../Refactorator/refactord/Entity.swift; sourceTree = "<group>"; };
+		BB356A6A1E0AF2E20056B10F /* IndexDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexDB.swift; path = ../../Refactorator/refactord/IndexDB.swift; sourceTree = "<group>"; };
+		BB356A6B1E0AF2E20056B10F /* IndexStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexStrings.swift; path = ../../Refactorator/refactord/IndexStrings.swift; sourceTree = "<group>"; };
+		BB356A6C1E0AF2E20056B10F /* LineGenerators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LineGenerators.swift; path = ../../Refactorator/refactord/LineGenerators.swift; sourceTree = "<group>"; };
+		BB356A6D1E0AF2E20056B10F /* LogParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogParser.swift; path = ../../Refactorator/refactord/LogParser.swift; sourceTree = "<group>"; };
+		BB356A6E1E0AF2E20056B10F /* SourceKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = SourceKit.swift; path = ../../Refactorator/refactord/SourceKit.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		BB356A6F1E0AF2E20056B10F /* sourcekitd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sourcekitd.h; path = ../../Refactorator/refactord/sourcekitd.h; sourceTree = "<group>"; };
+		BB356A771E0AF30B0056B10F /* Xcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xcode.h; path = ../../RefactoratorApp/Refactorator/Xcode.h; sourceTree = "<group>"; };
+		BB356A7A1E0AF36F0056B10F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = ../../RefactoratorApp/Refactorator/Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BB356A7C1E0AF37A0056B10F /* Source.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Source.html; path = ../../RefactoratorApp/Refactorator/Source.html; sourceTree = "<group>"; };
+		BB356A7D1E0AF37A0056B10F /* canviz.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = canviz.html; path = ../../RefactoratorApp/Refactorator/canviz.html; sourceTree = "<group>"; };
+		BB356A7E1E0AF37A0056B10F /* canviz2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = canviz2.html; path = ../../RefactoratorApp/Refactorator/canviz2.html; sourceTree = "<group>"; };
+		BB356A7F1E0AF37A0056B10F /* Intro.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Intro.html; path = ../../RefactoratorApp/Refactorator/Intro.html; sourceTree = "<group>"; };
+		BB356A841E0AF3910056B10F /* canviz-0.1 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "canviz-0.1"; path = "../../RefactoratorApp/canviz-0.1"; sourceTree = "<group>"; };
+		BB356A861E0AF3E10056B10F /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Utils.h; path = ../../RefactoratorApp/Refactorator/Utils.h; sourceTree = "<group>"; };
+		BB356A871E0AF3E10056B10F /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Utils.m; path = ../../RefactoratorApp/Refactorator/Utils.m; sourceTree = "<group>"; };
+		BB356A8A1E0AF40B0056B10F /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BB356A8D1E0AF4890056B10F /* App.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = App.icns; sourceTree = "<group>"; };
+		BB356A8F1E0AF4AC0056B10F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BB356A911E0AF4C40056B10F /* sourcekitd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = sourcekitd.framework; path = Toolchains/XcodeDefault.xctoolchain/usr/lib/sourcekitd.framework; sourceTree = DEVELOPER_DIR; };
+		BB356A991E0AF6BB0056B10F /* XprobeConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XprobeConsole.h; path = ../../XprobePlugin/Classes/XprobeConsole.h; sourceTree = "<group>"; };
+		BB356A9A1E0AF6BB0056B10F /* XprobeConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XprobeConsole.m; path = ../../XprobePlugin/Classes/XprobeConsole.m; sourceTree = "<group>"; };
+		BB356A9B1E0AF6BB0056B10F /* XprobeConsole.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XprobeConsole.xib; path = ../../XprobePlugin/Classes/XprobeConsole.xib; sourceTree = "<group>"; };
+		BB356A9C1E0AF6BB0056B10F /* XprobePluginMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XprobePluginMenuController.h; path = ../../XprobePlugin/Classes/XprobePluginMenuController.h; sourceTree = "<group>"; };
+		BB356A9D1E0AF6BB0056B10F /* XprobePluginMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XprobePluginMenuController.m; path = ../../XprobePlugin/Classes/XprobePluginMenuController.m; sourceTree = "<group>"; };
+		BB356A9E1E0AF6BB0056B10F /* XprobePluginMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = XprobePluginMenuController.xib; path = ../../XprobePlugin/Classes/XprobePluginMenuController.xib; sourceTree = "<group>"; };
+		BB356AA31E0AF6D80056B10F /* INPluginMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPluginMenuController.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/INPluginMenuController.h; sourceTree = "<group>"; };
+		BB356AA41E0AF6D80056B10F /* INPluginMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPluginMenuController.m; path = ../../injectionforxcode/InjectionPluginLite/Classes/INPluginMenuController.m; sourceTree = "<group>"; };
+		BB356AA51E0AF6D80056B10F /* INPluginMenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = INPluginMenuController.xib; path = ../../injectionforxcode/InjectionPluginLite/Classes/INPluginMenuController.xib; sourceTree = "<group>"; };
+		BB356AA61E0AF6D80056B10F /* INPluginClientController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = INPluginClientController.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/INPluginClientController.h; sourceTree = "<group>"; };
+		BB356AA71E0AF6D80056B10F /* INPluginClientController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = INPluginClientController.m; path = ../../injectionforxcode/InjectionPluginLite/Classes/INPluginClientController.m; sourceTree = "<group>"; };
+		BB356AA81E0AF6D80056B10F /* FileWatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FileWatcher.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/FileWatcher.h; sourceTree = "<group>"; };
+		BB356AA91E0AF6D80056B10F /* FileWatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FileWatcher.m; path = ../../injectionforxcode/InjectionPluginLite/Classes/FileWatcher.m; sourceTree = "<group>"; };
+		BB356AAA1E0AF6D80056B10F /* BundleInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BundleInterface.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/BundleInterface.h; sourceTree = "<group>"; };
+		BB356AAB1E0AF6D80056B10F /* BundleInjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BundleInjection.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/BundleInjection.h; sourceTree = "<group>"; };
+		BB356AAC1E0AF6D80056B10F /* BundleSweeper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BundleSweeper.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/BundleSweeper.h; sourceTree = "<group>"; };
+		BB356AAD1E0AF6D80056B10F /* IvarAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IvarAccess.h; path = ../../injectionforxcode/InjectionPluginLite/Classes/IvarAccess.h; sourceTree = "<group>"; };
+		BB356AB21E0AF7F40056B10F /* Xtrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xtrace.h; path = ../../XprobePlugin/Classes/Xtrace.h; sourceTree = "<group>"; };
+		BB356AB31E0AF7F40056B10F /* Xtrace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Xtrace.mm; path = ../../XprobePlugin/Classes/Xtrace.mm; sourceTree = "<group>"; };
+		BB356AB41E0AF7F40056B10F /* Xprobe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xprobe.h; path = ../../XprobePlugin/Classes/Xprobe.h; sourceTree = "<group>"; };
+		BB356AB51E0AF7F40056B10F /* Xprobe.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Xprobe.mm; path = ../../XprobePlugin/Classes/Xprobe.mm; sourceTree = "<group>"; };
+		BB356AB61E0AF7F40056B10F /* Xprobe+Service.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "Xprobe+Service.mm"; path = "../../XprobePlugin/Classes/Xprobe+Service.mm"; sourceTree = "<group>"; };
+		BB356ABA1E0AF8130056B10F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BB356ABC1E0B03220056B10F /* injection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = injection.png; path = ../../injectionforxcode/InjectionPluginLite/injection.png; sourceTree = "<group>"; };
+		BB356AD61E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.johnholdsworth.Injectorator.Helper; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356ADD1E0B09610056B10F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../Smuggler/Helper/main.m; sourceTree = "<group>"; };
+		BB356ADE1E0B09610056B10F /* Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helper.h; path = ../../Smuggler/Helper/Helper.h; sourceTree = "<group>"; };
+		BB356ADF1E0B09610056B10F /* Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helper.m; path = ../../Smuggler/Helper/Helper.m; sourceTree = "<group>"; };
+		BB356AE01E0B09610056B10F /* mach_inject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mach_inject.h; path = ../../Smuggler/Helper/mach_inject.h; sourceTree = "<group>"; };
+		BB356AE11E0B09610056B10F /* mach_inject.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mach_inject.c; path = ../../Smuggler/Helper/mach_inject.c; sourceTree = "<group>"; };
+		BB356AE51E0B096D0056B10F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB356AE61E0B096D0056B10F /* Info-Launchd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Launchd.plist"; sourceTree = "<group>"; };
+		BB356AFC1E0B0B8A0056B10F /* Bootstrap.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Bootstrap.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356AFE1E0B0B8A0056B10F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB356B021E0B0BA20056B10F /* mach_inject_bundle_stub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mach_inject_bundle_stub.h; path = ../../Smuggler/Bootstrap/mach_inject_bundle_stub.h; sourceTree = "<group>"; };
+		BB356B031E0B0BA20056B10F /* mach_inject_bundle_stub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mach_inject_bundle_stub.c; path = ../../Smuggler/Bootstrap/mach_inject_bundle_stub.c; sourceTree = "<group>"; };
+		BB356B081E0B0D0A0056B10F /* HelperInstaller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperInstaller.h; path = ../../Smuggler/Smuggler/HelperInstaller.h; sourceTree = "<group>"; };
+		BB356B091E0B0D0A0056B10F /* HelperInstaller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperInstaller.m; path = ../../Smuggler/Smuggler/HelperInstaller.m; sourceTree = "<group>"; };
+		BB356B0A1E0B0D0A0056B10F /* HelperProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelperProxy.h; path = ../../Smuggler/Smuggler/HelperProxy.h; sourceTree = "<group>"; };
+		BB356B0B1E0B0D0A0056B10F /* HelperProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelperProxy.m; path = ../../Smuggler/Smuggler/HelperProxy.m; sourceTree = "<group>"; };
+		BB356B121E0B0E680056B10F /* InjectionOK.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = InjectionOK.tif; sourceTree = "<group>"; };
+		BB356B5C1E0B184C0056B10F /* InjectionLoader.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = InjectionLoader.xcodeproj; path = InjectionLoader/InjectionLoader.xcodeproj; sourceTree = "<group>"; };
+		BB356B7B1E0B4A9A0056B10F /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		BB356B841E0B5A500056B10F /* InjectionIdle.tif */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = InjectionIdle.tif; sourceTree = "<group>"; };
+		BB356B861E0B5D450056B10F /* INController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INController.swift; sourceTree = "<group>"; };
+		BB356B881E0B72270056B10F /* common.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = common.pm; path = ../../injectionforxcode/InjectionPluginLite/common.pm; sourceTree = "<group>"; };
+		BB356B8A1E0B72890056B10F /* iOSBundleTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; name = iOSBundleTemplate; path = ../injectionforxcode/InjectionPluginLite/iOSBundleTemplate; sourceTree = "<group>"; };
+		BB356B8B1E0B72890056B10F /* OSXBundleTemplate */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OSXBundleTemplate; path = ../injectionforxcode/InjectionPluginLite/OSXBundleTemplate; sourceTree = "<group>"; };
+		BB356B901E0B75030056B10F /* injectSource.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = injectSource.pl; path = ../../injectionforxcode/InjectionPluginLite/injectSource.pl; sourceTree = "<group>"; };
+		BB356B961E0B8A7F0056B10F /* xprobe.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = xprobe.html; path = ../../XprobePlugin/xprobe.html; sourceTree = "<group>"; };
+		BB356B971E0B8A7F0056B10F /* tiny_red.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = tiny_red.gif; path = ../../XprobePlugin/tiny_red.gif; sourceTree = "<group>"; };
+		BB356B9A1E0B8B0D0056B10F /* CodeMirror */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CodeMirror; path = ../../XprobePlugin/CodeMirror; sourceTree = "<group>"; };
+		BB356BAE1E0B8E930056B10F /* XprobeSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XprobeSwift.xcodeproj; path = XprobeSwift/XprobeSwift.xcodeproj; sourceTree = "<group>"; };
+		BB356BC41E0B976E0056B10F /* evalCode.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = evalCode.pl; path = ../../injectionforxcode/InjectionPluginLite/evalCode.pl; sourceTree = "<group>"; };
+		BB356BD11E0C4C0E0056B10F /* injectSource */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = injectSource; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356BD31E0C4C0F0056B10F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB356BDF1E0C758F0056B10F /* Integration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Integration.swift; sourceTree = "<group>"; };
+		BB356C001E0D9B410056B10F /* Integration.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Integration.xib; sourceTree = "<group>"; };
+		BB356C051E0DA0E40056B10F /* patchProject.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = patchProject.pl; path = ../../injectionforxcode/InjectionPluginLite/patchProject.pl; sourceTree = "<group>"; };
+		BB356C081E0DA37C0056B10F /* revertProject.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = revertProject.pl; path = ../../injectionforxcode/InjectionPluginLite/revertProject.pl; sourceTree = "<group>"; };
+		BB4847BC1E380E1000622FA4 /* DDHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyCenter.h; path = ../../DDHotKey/DDHotKeyCenter.h; sourceTree = "<group>"; };
+		BB4847BD1E380E1000622FA4 /* DDHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyCenter.m; path = ../../DDHotKey/DDHotKeyCenter.m; sourceTree = "<group>"; };
+		BB4847BE1E380E1000622FA4 /* DDHotKeyUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDHotKeyUtilities.h; path = ../../DDHotKey/DDHotKeyUtilities.h; sourceTree = "<group>"; };
+		BB4847BF1E380E1000622FA4 /* DDHotKeyUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDHotKeyUtilities.m; path = ../../DDHotKey/DDHotKeyUtilities.m; sourceTree = "<group>"; };
+		BB5A609E1E221EA600B6C1D9 /* closed_folder_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = closed_folder_orange.png; path = ../DiskTree/closed_folder_orange.png; sourceTree = "<group>"; };
+		BB5A609F1E221EA600B6C1D9 /* open_folder_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = open_folder_orange.png; path = ../DiskTree/open_folder_orange.png; sourceTree = "<group>"; };
+		BB5A60A01E221EA600B6C1D9 /* document.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = document.png; path = ../DiskTree/document.png; sourceTree = "<group>"; };
+		BB5A60A11E221EA600B6C1D9 /* scan2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scan2.png; path = ../DiskTree/scan2.png; sourceTree = "<group>"; };
+		BB5A60A21E221EA600B6C1D9 /* scan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = scan.png; path = ../DiskTree/scan.png; sourceTree = "<group>"; };
+		BB5A60A81E221EB400B6C1D9 /* DiskTreeAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiskTreeAppDelegate.h; path = ../DiskTree/DiskTreeAppDelegate.h; sourceTree = "<group>"; };
+		BB5A60A91E221EB400B6C1D9 /* DiskTreeAppDelegate.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = DiskTreeAppDelegate.m; path = ../DiskTree/DiskTreeAppDelegate.m; sourceTree = "<group>"; };
+		BB5A60B11E221F5C00B6C1D9 /* DiskTree.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = DiskTree.html; path = DiskTree/DiskTree.html; sourceTree = "<group>"; };
+		BB5A60B21E221F5C00B6C1D9 /* DiskTree.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DiskTree.xib; path = DiskTree/DiskTree.xib; sourceTree = "<group>"; };
+		BB5A60B91E22211900B6C1D9 /* tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = tree; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB5A60C61E2221EC00B6C1D9 /* tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tree.c; path = DiskTree/tree.c; sourceTree = "<group>"; };
+		BB5A60C91E2222A200B6C1D9 /* objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objcpp.h; path = ../ObjCpp/objcpp.h; sourceTree = "<group>"; };
+		BB5A60CA1E2222A200B6C1D9 /* objstr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objstr.h; path = ../ObjCpp/objstr.h; sourceTree = "<group>"; };
+		BB6528301E698C4100B8FB95 /* coverage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = coverage.rb; path = ../../RefactoratorApp/Refactorator/coverage.rb; sourceTree = "<group>"; };
+		BB6528311E698C4100B8FB95 /* Coverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coverage.swift; path = ../../RefactoratorApp/Refactorator/Coverage.swift; sourceTree = "<group>"; };
+		BB7D5F0D1E15B94200393CA1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BBCE04D71E0E16350097E1E6 /* openBundle.pl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = openBundle.pl; path = ../../injectionforxcode/InjectionPluginLite/openBundle.pl; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB356A4A1E0AF2780056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356A901E0AF4AC0056B10F /* WebKit.framework in Frameworks */,
+				BB010C0F1E1F85FF00C3AACA /* QTKit.framework in Frameworks */,
+				BB356A8B1E0AF40B0056B10F /* libsqlite3.tbd in Frameworks */,
+				BB356ABB1E0AF8130056B10F /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356AD31E0B09000056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356AF91E0B0B8A0056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356BCE1E0C4C0E0056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB5A60B61E22211900B6C1D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB010BBD1E1F39BE00C3AACA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				BB010BC01E1F39E800C3AACA /* RMPluginController.h */,
+				BB010BC11E1F39E800C3AACA /* RMPluginController.m */,
+				BB010BC21E1F39E800C3AACA /* RMPluginController.xib */,
+				BB010BC31E1F39E800C3AACA /* RMWindowController.h */,
+				BB010BC41E1F39E800C3AACA /* RMWindowController.m */,
+				BB010BC51E1F39E800C3AACA /* RMWindowController.xib */,
+				BB010BC61E1F39E800C3AACA /* RMMacroManager.h */,
+				BB010BC71E1F39E800C3AACA /* RMMacroManager.m */,
+				BB010BC81E1F39E800C3AACA /* RMDeviceController.h */,
+				BB010BC91E1F39E800C3AACA /* RMDeviceController.m */,
+				BB010BCA1E1F39E800C3AACA /* RMImageView.h */,
+				BB010BCB1E1F39E800C3AACA /* RMImageView.m */,
+				BB010BCC1E1F39E800C3AACA /* RemoteCapture.h */,
+				BB010BCD1E1F39E800C3AACA /* RemoteHeaders.h */,
+				BB010BD31E1F39FE00C3AACA /* Resources */,
+			);
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		BB010BD31E1F39FE00C3AACA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB010BD41E1F3A0B00C3AACA /* iphone.png */,
+				BB010BD51E1F3A0B00C3AACA /* log.html */,
+				BB010BD71E1F3A0B00C3AACA /* patch.py */,
+				BB010BD81E1F3A0B00C3AACA /* unpatch.py */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BB356A441E0AF2780056B10F = {
+			isa = PBXGroup;
+			children = (
+				BB25263D1F65CC9700898347 /* LICENSE */,
+				BB7D5F0D1E15B94200393CA1 /* README.md */,
+				BB356A4F1E0AF2780056B10F /* Injectorator */,
+				BB356ABE1E0B04B80056B10F /* Refactorator */,
+				BB356A971E0AF6710056B10F /* Injection */,
+				BB356A981E0AF67D0056B10F /* Xprobe */,
+				BB010BBD1E1F39BE00C3AACA /* Remote */,
+				BB5A609B1E221E7000B6C1D9 /* DiskTree */,
+				BB356AD71E0B09000056B10F /* InjectionHelper */,
+				BB356AFD1E0B0B8A0056B10F /* InjectionBootstrap */,
+				BB356B5C1E0B184C0056B10F /* InjectionLoader.xcodeproj */,
+				BB356BAE1E0B8E930056B10F /* XprobeSwift.xcodeproj */,
+				BB356B8A1E0B72890056B10F /* iOSBundleTemplate */,
+				BB356B8B1E0B72890056B10F /* OSXBundleTemplate */,
+				BB356BD21E0C4C0F0056B10F /* injectSource */,
+				BB356A891E0AF40A0056B10F /* Frameworks */,
+				BB356A4E1E0AF2780056B10F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB356A4E1E0AF2780056B10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB356A4D1E0AF2780056B10F /* Injection.app */,
+				BB356AD61E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */,
+				BB356AFC1E0B0B8A0056B10F /* Bootstrap.bundle */,
+				BB356BD11E0C4C0E0056B10F /* injectSource */,
+				BB5A60B91E22211900B6C1D9 /* tree */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB356A4F1E0AF2780056B10F /* Injectorator */ = {
+			isa = PBXGroup;
+			children = (
+				BB356BDF1E0C758F0056B10F /* Integration.swift */,
+				BB356C001E0D9B410056B10F /* Integration.xib */,
+				BB248A921E210E2F003F0DF6 /* Benchmark.swift */,
+				BB356B861E0B5D450056B10F /* INController.swift */,
+				BB010BE51E1F3D5A00C3AACA /* RMController.swift */,
+				BB356B081E0B0D0A0056B10F /* HelperInstaller.h */,
+				BB356B091E0B0D0A0056B10F /* HelperInstaller.m */,
+				BB356B0A1E0B0D0A0056B10F /* HelperProxy.h */,
+				BB356B0B1E0B0D0A0056B10F /* HelperProxy.m */,
+				BB4847BC1E380E1000622FA4 /* DDHotKeyCenter.h */,
+				BB4847BD1E380E1000622FA4 /* DDHotKeyCenter.m */,
+				BB4847BE1E380E1000622FA4 /* DDHotKeyUtilities.h */,
+				BB4847BF1E380E1000622FA4 /* DDHotKeyUtilities.m */,
+				BB356B841E0B5A500056B10F /* InjectionIdle.tif */,
+				BB356B121E0B0E680056B10F /* InjectionOK.tif */,
+				BB356B881E0B72270056B10F /* common.pm */,
+				BB356C051E0DA0E40056B10F /* patchProject.pl */,
+				BB356C081E0DA37C0056B10F /* revertProject.pl */,
+				BB356B901E0B75030056B10F /* injectSource.pl */,
+				BBCE04D71E0E16350097E1E6 /* openBundle.pl */,
+				BB356BC41E0B976E0056B10F /* evalCode.pl */,
+				BB356A5D1E0AF2AC0056B10F /* Injectorator-Bridging-Header.h */,
+				BB356A781E0AF32A0056B10F /* Resources */,
+			);
+			path = Injectorator;
+			sourceTree = "<group>";
+		};
+		BB356A781E0AF32A0056B10F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB356A521E0AF2780056B10F /* Assets.xcassets */,
+				BB356A791E0AF36E0056B10F /* MainMenu.xib */,
+				BB356B7B1E0B4A9A0056B10F /* Credits.rtf */,
+				BB356A8D1E0AF4890056B10F /* App.icns */,
+				BB356A571E0AF2780056B10F /* Info.plist */,
+				BB356A7C1E0AF37A0056B10F /* Source.html */,
+				BB356A7D1E0AF37A0056B10F /* canviz.html */,
+				BB356A7E1E0AF37A0056B10F /* canviz2.html */,
+				BB356A7F1E0AF37A0056B10F /* Intro.html */,
+				BB356A841E0AF3910056B10F /* canviz-0.1 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BB356A891E0AF40A0056B10F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB010C0E1E1F85FF00C3AACA /* QTKit.framework */,
+				BB356ABA1E0AF8130056B10F /* libz.tbd */,
+				BB356A911E0AF4C40056B10F /* sourcekitd.framework */,
+				BB356A8F1E0AF4AC0056B10F /* WebKit.framework */,
+				BB356A8A1E0AF40B0056B10F /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB356A971E0AF6710056B10F /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				BB356AA31E0AF6D80056B10F /* INPluginMenuController.h */,
+				BB356AA41E0AF6D80056B10F /* INPluginMenuController.m */,
+				BB356AA51E0AF6D80056B10F /* INPluginMenuController.xib */,
+				BB356AA61E0AF6D80056B10F /* INPluginClientController.h */,
+				BB356AA71E0AF6D80056B10F /* INPluginClientController.m */,
+				BB356AA81E0AF6D80056B10F /* FileWatcher.h */,
+				BB356AA91E0AF6D80056B10F /* FileWatcher.m */,
+				BB356AAA1E0AF6D80056B10F /* BundleInterface.h */,
+				BB356AAB1E0AF6D80056B10F /* BundleInjection.h */,
+				BB356AAC1E0AF6D80056B10F /* BundleSweeper.h */,
+				BB356AAD1E0AF6D80056B10F /* IvarAccess.h */,
+				BB356ABC1E0B03220056B10F /* injection.png */,
+			);
+			name = Injection;
+			path = Injectorator;
+			sourceTree = "<group>";
+		};
+		BB356A981E0AF67D0056B10F /* Xprobe */ = {
+			isa = PBXGroup;
+			children = (
+				BB356AB21E0AF7F40056B10F /* Xtrace.h */,
+				BB356AB31E0AF7F40056B10F /* Xtrace.mm */,
+				BB356AB41E0AF7F40056B10F /* Xprobe.h */,
+				BB356AB51E0AF7F40056B10F /* Xprobe.mm */,
+				BB356AB61E0AF7F40056B10F /* Xprobe+Service.mm */,
+				BB356A991E0AF6BB0056B10F /* XprobeConsole.h */,
+				BB356A9A1E0AF6BB0056B10F /* XprobeConsole.m */,
+				BB356A9B1E0AF6BB0056B10F /* XprobeConsole.xib */,
+				BB356A9C1E0AF6BB0056B10F /* XprobePluginMenuController.h */,
+				BB356A9D1E0AF6BB0056B10F /* XprobePluginMenuController.m */,
+				BB356A9E1E0AF6BB0056B10F /* XprobePluginMenuController.xib */,
+				BB356B961E0B8A7F0056B10F /* xprobe.html */,
+				BB356B971E0B8A7F0056B10F /* tiny_red.gif */,
+				BB356B9A1E0B8B0D0056B10F /* CodeMirror */,
+			);
+			name = Xprobe;
+			path = Injectorator;
+			sourceTree = "<group>";
+		};
+		BB356ABE1E0B04B80056B10F /* Refactorator */ = {
+			isa = PBXGroup;
+			children = (
+				BB356A5F1E0AF2AD0056B10F /* AppDelegate.swift */,
+				BB356A5E1E0AF2AD0056B10F /* AppController.swift */,
+				BB356A611E0AF2AD0056B10F /* Formatter.swift */,
+				BB356A601E0AF2AD0056B10F /* Common.swift */,
+				BB356A621E0AF2AD0056B10F /* Project.swift */,
+				BB356A691E0AF2E20056B10F /* Entity.swift */,
+				BB356A6A1E0AF2E20056B10F /* IndexDB.swift */,
+				BB356A681E0AF2E20056B10F /* ByteRegex.swift */,
+				BB356A6B1E0AF2E20056B10F /* IndexStrings.swift */,
+				BB356A6C1E0AF2E20056B10F /* LineGenerators.swift */,
+				BB356A6D1E0AF2E20056B10F /* LogParser.swift */,
+				BB356A6E1E0AF2E20056B10F /* SourceKit.swift */,
+				BB6528311E698C4100B8FB95 /* Coverage.swift */,
+				BB6528301E698C4100B8FB95 /* coverage.rb */,
+				BB356A6F1E0AF2E20056B10F /* sourcekitd.h */,
+				BB356A771E0AF30B0056B10F /* Xcode.h */,
+				BB356A861E0AF3E10056B10F /* Utils.h */,
+				BB356A871E0AF3E10056B10F /* Utils.m */,
+			);
+			name = Refactorator;
+			path = Injectorator;
+			sourceTree = "<group>";
+		};
+		BB356AD71E0B09000056B10F /* InjectionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BB356ADD1E0B09610056B10F /* main.m */,
+				BB356ADE1E0B09610056B10F /* Helper.h */,
+				BB356ADF1E0B09610056B10F /* Helper.m */,
+				BB356AE01E0B09610056B10F /* mach_inject.h */,
+				BB356AE11E0B09610056B10F /* mach_inject.c */,
+				BB356AE51E0B096D0056B10F /* Info.plist */,
+				BB356AE61E0B096D0056B10F /* Info-Launchd.plist */,
+			);
+			path = InjectionHelper;
+			sourceTree = "<group>";
+		};
+		BB356AFD1E0B0B8A0056B10F /* InjectionBootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				BB356B021E0B0BA20056B10F /* mach_inject_bundle_stub.h */,
+				BB356B031E0B0BA20056B10F /* mach_inject_bundle_stub.c */,
+				BB356AFE1E0B0B8A0056B10F /* Info.plist */,
+			);
+			path = InjectionBootstrap;
+			sourceTree = "<group>";
+		};
+		BB356B5D1E0B184C0056B10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB356B611E0B184D0056B10F /* InjectionLoader.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB356BAF1E0B8E930056B10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB356BB31E0B8E940056B10F /* XprobeSwift.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB356BD21E0C4C0F0056B10F /* injectSource */ = {
+			isa = PBXGroup;
+			children = (
+				BB356BD31E0C4C0F0056B10F /* main.m */,
+			);
+			path = injectSource;
+			sourceTree = "<group>";
+		};
+		BB5A609B1E221E7000B6C1D9 /* DiskTree */ = {
+			isa = PBXGroup;
+			children = (
+				BB5A60C91E2222A200B6C1D9 /* objcpp.h */,
+				BB5A60CA1E2222A200B6C1D9 /* objstr.h */,
+				BB5A60B21E221F5C00B6C1D9 /* DiskTree.xib */,
+				BB5A60B11E221F5C00B6C1D9 /* DiskTree.html */,
+				BB5A60A81E221EB400B6C1D9 /* DiskTreeAppDelegate.h */,
+				BB5A60A91E221EB400B6C1D9 /* DiskTreeAppDelegate.m */,
+				BB5A609E1E221EA600B6C1D9 /* closed_folder_orange.png */,
+				BB5A609F1E221EA600B6C1D9 /* open_folder_orange.png */,
+				BB5A60A01E221EA600B6C1D9 /* document.png */,
+				BB5A60A11E221EA600B6C1D9 /* scan2.png */,
+				BB5A60A21E221EA600B6C1D9 /* scan.png */,
+				BB5A60C61E2221EC00B6C1D9 /* tree.c */,
+			);
+			name = DiskTree;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB356A4C1E0AF2780056B10F /* Injection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356A5A1E0AF2780056B10F /* Build configuration list for PBXNativeTarget "Injection" */;
+			buildPhases = (
+				BBE9E2F51E32274A00CF0929 /* ShellScript */,
+				BB356A491E0AF2780056B10F /* Sources */,
+				BB356A4A1E0AF2780056B10F /* Frameworks */,
+				BB356A4B1E0AF2780056B10F /* Resources */,
+				BB356B7D1E0B54240056B10F /* CopyFiles */,
+				BB356B6D1E0B192C0056B10F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB356AEB1E0B09F60056B10F /* PBXTargetDependency */,
+				BB356B071E0B0BCE0056B10F /* PBXTargetDependency */,
+				BB356BD91E0C4C1B0056B10F /* PBXTargetDependency */,
+			);
+			name = Injection;
+			productName = Injectorator;
+			productReference = BB356A4D1E0AF2780056B10F /* Injection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB356AD51E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356ADA1E0B09000056B10F /* Build configuration list for PBXNativeTarget "com.johnholdsworth.Injectorator.Helper" */;
+			buildPhases = (
+				BB356AD21E0B09000056B10F /* Sources */,
+				BB356AD31E0B09000056B10F /* Frameworks */,
+				BB356AD41E0B09000056B10F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = com.johnholdsworth.Injectorator.Helper;
+			productName = InjectionHelper;
+			productReference = BB356AD61E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */;
+			productType = "com.apple.product-type.tool";
+		};
+		BB356AFB1E0B0B8A0056B10F /* InjectionBootstrap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356AFF1E0B0B8A0056B10F /* Build configuration list for PBXNativeTarget "InjectionBootstrap" */;
+			buildPhases = (
+				BB356AF81E0B0B8A0056B10F /* Sources */,
+				BB356AF91E0B0B8A0056B10F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InjectionBootstrap;
+			productName = InjectionBootstrap;
+			productReference = BB356AFC1E0B0B8A0056B10F /* Bootstrap.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		BB356BD01E0C4C0E0056B10F /* injectSource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356BD71E0C4C130056B10F /* Build configuration list for PBXNativeTarget "injectSource" */;
+			buildPhases = (
+				BB356BCD1E0C4C0E0056B10F /* Sources */,
+				BB356BCE1E0C4C0E0056B10F /* Frameworks */,
+				BB356BCF1E0C4C0E0056B10F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = injectSource;
+			productName = injectSource;
+			productReference = BB356BD11E0C4C0E0056B10F /* injectSource */;
+			productType = "com.apple.product-type.tool";
+		};
+		BB5A60B81E22211900B6C1D9 /* tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB5A60BD1E22211900B6C1D9 /* Build configuration list for PBXNativeTarget "tree" */;
+			buildPhases = (
+				BB5A60B51E22211900B6C1D9 /* Sources */,
+				BB5A60B61E22211900B6C1D9 /* Frameworks */,
+				BB5A60B71E22211900B6C1D9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tree;
+			productName = tree;
+			productReference = BB5A60B91E22211900B6C1D9 /* tree */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB356A451E0AF2780056B10F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "John Holdsworth";
+				TargetAttributes = {
+					BB356A4C1E0AF2780056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+					};
+					BB356AD51E0B09000056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Manual;
+					};
+					BB356AFB1E0B0B8A0056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						ProvisioningStyle = Manual;
+					};
+					BB356BD01E0C4C0E0056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						ProvisioningStyle = Manual;
+					};
+					BB5A60B81E22211900B6C1D9 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = BB356A481E0AF2780056B10F /* Build configuration list for PBXProject "Injectorator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB356A441E0AF2780056B10F;
+			productRefGroup = BB356A4E1E0AF2780056B10F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BB356B5D1E0B184C0056B10F /* Products */;
+					ProjectRef = BB356B5C1E0B184C0056B10F /* InjectionLoader.xcodeproj */;
+				},
+				{
+					ProductGroup = BB356BAF1E0B8E930056B10F /* Products */;
+					ProjectRef = BB356BAE1E0B8E930056B10F /* XprobeSwift.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				BB356A4C1E0AF2780056B10F /* Injection */,
+				BB356AD51E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */,
+				BB356AFB1E0B0B8A0056B10F /* InjectionBootstrap */,
+				BB356BD01E0C4C0E0056B10F /* injectSource */,
+				BB5A60B81E22211900B6C1D9 /* tree */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BB356B611E0B184D0056B10F /* InjectionLoader.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = InjectionLoader.bundle;
+			remoteRef = BB356B601E0B184D0056B10F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BB356BB31E0B8E940056B10F /* XprobeSwift.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = XprobeSwift.bundle;
+			remoteRef = BB356BB21E0B8E940056B10F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB356A4B1E0AF2780056B10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4847C81E38155D00622FA4 /* DDHotKeyCenter.h in Resources */,
+				BB20D57A1E1F98640013C59F /* README.md in Resources */,
+				BB010BE71E1F437C00C3AACA /* RMPluginController.xib in Resources */,
+				BB5A60A61E221EA600B6C1D9 /* scan2.png in Resources */,
+				BB010BE81E1F437C00C3AACA /* RMWindowController.xib in Resources */,
+				BB356C091E0DA37C0056B10F /* revertProject.pl in Resources */,
+				BBCE04D81E0E16350097E1E6 /* openBundle.pl in Resources */,
+				BB356BDA1E0C4C2A0056B10F /* injectSource in Resources */,
+				BB356B051E0B0BC40056B10F /* Bootstrap.bundle in Resources */,
+				BB356B8E1E0B747B0056B10F /* BundleInterface.h in Resources */,
+				BB010BDC1E1F3A0B00C3AACA /* patch.py in Resources */,
+				BB010BDA1E1F3A0B00C3AACA /* log.html in Resources */,
+				BB356B8F1E0B747B0056B10F /* BundleInjection.h in Resources */,
+				BB356C311E0DA78B0056B10F /* BundleSweeper.h in Resources */,
+				BB356C321E0DA7970056B10F /* IvarAccess.h in Resources */,
+				BB25263E1F65CC9700898347 /* LICENSE in Resources */,
+				BB356B891E0B72270056B10F /* common.pm in Resources */,
+				BB356C071E0DA11C0056B10F /* patchProject.pl in Resources */,
+				BB356B911E0B75030056B10F /* injectSource.pl in Resources */,
+				BB356BC51E0B976E0056B10F /* evalCode.pl in Resources */,
+				BB356B8C1E0B72890056B10F /* iOSBundleTemplate in Resources */,
+				BB356B8D1E0B72890056B10F /* OSXBundleTemplate in Resources */,
+				BB356AAF1E0AF6D80056B10F /* INPluginMenuController.xib in Resources */,
+				BB356AA21E0AF6BB0056B10F /* XprobePluginMenuController.xib in Resources */,
+				BB356AA01E0AF6BB0056B10F /* XprobeConsole.xib in Resources */,
+				BB356B991E0B8A7F0056B10F /* tiny_red.gif in Resources */,
+				BB6528321E698C4100B8FB95 /* coverage.rb in Resources */,
+				BB356B981E0B8A7F0056B10F /* xprobe.html in Resources */,
+				BB356A831E0AF37A0056B10F /* Intro.html in Resources */,
+				BB356A801E0AF37A0056B10F /* Source.html in Resources */,
+				BB356A811E0AF37A0056B10F /* canviz.html in Resources */,
+				BB356A821E0AF37A0056B10F /* canviz2.html in Resources */,
+				BB010BDD1E1F3A0B00C3AACA /* unpatch.py in Resources */,
+				BB356A851E0AF3910056B10F /* canviz-0.1 in Resources */,
+				BB5A60A71E221EA600B6C1D9 /* scan.png in Resources */,
+				BB356B9B1E0B8B0D0056B10F /* CodeMirror in Resources */,
+				BB356A531E0AF2780056B10F /* Assets.xcassets in Resources */,
+				BB356C041E0D9FC20056B10F /* Integration.xib in Resources */,
+				BB356A7B1E0AF36F0056B10F /* MainMenu.xib in Resources */,
+				BB5A60B41E221F5C00B6C1D9 /* DiskTree.xib in Resources */,
+				BB5A60B31E221F5C00B6C1D9 /* DiskTree.html in Resources */,
+				BB356A8E1E0AF4890056B10F /* App.icns in Resources */,
+				BB356B131E0B0E680056B10F /* InjectionOK.tif in Resources */,
+				BB356B851E0B5A500056B10F /* InjectionIdle.tif in Resources */,
+				BB356B7C1E0B4A9A0056B10F /* Credits.rtf in Resources */,
+				BB010BD91E1F3A0B00C3AACA /* iphone.png in Resources */,
+				BB356ABD1E0B03220056B10F /* injection.png in Resources */,
+				BB356A8C1E0AF42A0056B10F /* Xcode.h in Resources */,
+				BB010BDE1E1F3A5600C3AACA /* RemoteCapture.h in Resources */,
+				BB010BDF1E1F3A5600C3AACA /* RemoteHeaders.h in Resources */,
+				BB5A60A31E221EA600B6C1D9 /* closed_folder_orange.png in Resources */,
+				BB5A60A41E221EA600B6C1D9 /* open_folder_orange.png in Resources */,
+				BB5A60A51E221EA600B6C1D9 /* document.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB356B6D1E0B192C0056B10F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -x";
+			shellScript = "SYMROOT=/tmp\nchmod +x \"$CODESIGNING_FOLDER_PATH/Contents/Resources\"/*.pl &&\ncd InjectionLoader && \"$DEVELOPER_BIN_DIR\"/xcodebuild SYMROOT=$SYMROOT -arch x86_64 -sdk iphonesimulator -config Debug && cd - &&\ncp -rfv $SYMROOT/*-iphonesimulator/InjectionLoader.bundle \"$CODESIGNING_FOLDER_PATH/Contents/Resources\" &&\ncd XprobeSwift && \"$DEVELOPER_BIN_DIR\"/xcodebuild SYMROOT=$SYMROOT -arch x86_64 -sdk iphonesimulator -config Debug && cd - &&\nrm -rf \"$CODESIGNING_FOLDER_PATH/Contents/Resources/InjectionLoader.bundle/XprobeSwift.loader\" &&\ncp -rfv $SYMROOT/*-iphonesimulator/XprobeSwift.bundle \"$CODESIGNING_FOLDER_PATH/Contents/Resources/InjectionLoader.bundle/XprobeSwift.loader\" &&\ncd ../XprobePlugin/XprobeBundle &&\n\"$DEVELOPER_BIN_DIR\"/xcodebuild SYMROOT=$SYMROOT -arch x86_64 -sdk macosx -config Debug &&\ncp -rfv $SYMROOT/Debug/XprobeBundle.loader \"$CODESIGNING_FOLDER_PATH/Contents/Resources\" && cd -\ncd XprobeSwift && \"$DEVELOPER_BIN_DIR\"/xcodebuild SYMROOT=$SYMROOT -arch x86_64 -sdk macosx -config Debug && cd - &&\nrm -rf \"$CODESIGNING_FOLDER_PATH/Contents/Resources/XprobeBundle.loader/XprobeSwift.loader\" &&\ncp -rfv $SYMROOT/Debug/XprobeSwift.bundle \"$CODESIGNING_FOLDER_PATH/Contents/Resources/XprobeBundle.loader/XprobeSwift.loader\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBE9E2F51E32274A00CF0929 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\")\nbuildNumber=$(($buildNumber + 1))\nchmod +w \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"${PROJECT_DIR}/${INFOPLIST_FILE}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB356A491E0AF2780056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356AB01E0AF6D80056B10F /* INPluginClientController.m in Sources */,
+				BB356AAE1E0AF6D80056B10F /* INPluginMenuController.m in Sources */,
+				BB356AA11E0AF6BB0056B10F /* XprobePluginMenuController.m in Sources */,
+				BB5A60AB1E221EB400B6C1D9 /* DiskTreeAppDelegate.m in Sources */,
+				BB356A9F1E0AF6BB0056B10F /* XprobeConsole.m in Sources */,
+				BB356AB71E0AF7F40056B10F /* Xtrace.mm in Sources */,
+				BB356AB81E0AF7F40056B10F /* Xprobe.mm in Sources */,
+				BB356AB91E0AF7F40056B10F /* Xprobe+Service.mm in Sources */,
+				BB010BE01E1F3C2300C3AACA /* RMPluginController.m in Sources */,
+				BB6528331E698C4100B8FB95 /* Coverage.swift in Sources */,
+				BB010BE11E1F3C2300C3AACA /* RMWindowController.m in Sources */,
+				BB010BE21E1F3C2300C3AACA /* RMMacroManager.m in Sources */,
+				BB010BE31E1F3C2300C3AACA /* RMDeviceController.m in Sources */,
+				BB010BE41E1F3C2300C3AACA /* RMImageView.m in Sources */,
+				BB356BE31E0C761E0056B10F /* Integration.swift in Sources */,
+				BB248A941E210FCC003F0DF6 /* Benchmark.swift in Sources */,
+				BB356B871E0B5D450056B10F /* INController.swift in Sources */,
+				BB010BE61E1F3D5A00C3AACA /* RMController.swift in Sources */,
+				BB356A641E0AF2AD0056B10F /* AppDelegate.swift in Sources */,
+				BB356A631E0AF2AD0056B10F /* AppController.swift in Sources */,
+				BB356A661E0AF2AD0056B10F /* Formatter.swift in Sources */,
+				BB356A881E0AF3E10056B10F /* Utils.m in Sources */,
+				BB356B0C1E0B0D0A0056B10F /* HelperInstaller.m in Sources */,
+				BB356AB11E0AF6D80056B10F /* FileWatcher.m in Sources */,
+				BB356B0D1E0B0D0A0056B10F /* HelperProxy.m in Sources */,
+				BB356A651E0AF2AD0056B10F /* Common.swift in Sources */,
+				BB356A711E0AF2E20056B10F /* Entity.swift in Sources */,
+				BB356A671E0AF2AD0056B10F /* Project.swift in Sources */,
+				BB4847C11E380E1000622FA4 /* DDHotKeyUtilities.m in Sources */,
+				BB356A761E0AF2E20056B10F /* SourceKit.swift in Sources */,
+				BB4847C01E380E1000622FA4 /* DDHotKeyCenter.m in Sources */,
+				BB356A731E0AF2E20056B10F /* IndexStrings.swift in Sources */,
+				BB356A721E0AF2E20056B10F /* IndexDB.swift in Sources */,
+				BB356A751E0AF2E20056B10F /* LogParser.swift in Sources */,
+				BB356A701E0AF2E20056B10F /* ByteRegex.swift in Sources */,
+				BB356A741E0AF2E20056B10F /* LineGenerators.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356AD21E0B09000056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356AE21E0B09610056B10F /* main.m in Sources */,
+				BB356AE31E0B09610056B10F /* Helper.m in Sources */,
+				BB356AE41E0B09610056B10F /* mach_inject.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356AF81E0B0B8A0056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356B041E0B0BA20056B10F /* mach_inject_bundle_stub.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB356BCD1E0C4C0E0056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356BD41E0C4C0F0056B10F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB5A60B51E22211900B6C1D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5A60C81E22220B00B6C1D9 /* tree.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB356AEB1E0B09F60056B10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB356AD51E0B09000056B10F /* com.johnholdsworth.Injectorator.Helper */;
+			targetProxy = BB356AEA1E0B09F60056B10F /* PBXContainerItemProxy */;
+		};
+		BB356B071E0B0BCE0056B10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB356AFB1E0B0B8A0056B10F /* InjectionBootstrap */;
+			targetProxy = BB356B061E0B0BCE0056B10F /* PBXContainerItemProxy */;
+		};
+		BB356BD91E0C4C1B0056B10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB356BD01E0C4C0E0056B10F /* injectSource */;
+			targetProxy = BB356BD81E0C4C1B0056B10F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB356A791E0AF36E0056B10F /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB356A7A1E0AF36F0056B10F /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB356A581E0AF2780056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"INJECTION_PORT=$INJECTION_PORT",
+					"XPROBE_PORT=$XPROBE_PORT",
+					"REMOTE_PORT=$REMOTE_PORT",
+					"HELPER_MACH_ID=\\\"$HELPER_MACH_ID\\\"",
+					"INJECTION_ADDR=INADDR_LOOPBACK",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = Injectorator;
+				HELPER_MACH_ID = com.johnholdsworth.Injectorator.Helper.mach;
+				INJECTION_PORT = 31452;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				REMOTE_PORT = 31459;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				XPROBE_PORT = 31458;
+			};
+			name = Debug;
+		};
+		BB356A591E0AF2780056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"INJECTION_PORT=$INJECTION_PORT",
+					"XPROBE_PORT=$XPROBE_PORT",
+					"REMOTE_PORT=$REMOTE_PORT",
+					"HELPER_MACH_ID=\\\"$HELPER_MACH_ID\\\"",
+					"INJECTION_ADDR=INADDR_LOOPBACK",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = Injectorator;
+				HELPER_MACH_ID = com.johnholdsworth.Injectorator.Helper.mach;
+				INJECTION_PORT = 31452;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				REMOTE_PORT = 31459;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				XPROBE_PORT = 31458;
+			};
+			name = Release;
+		};
+		BB356A5B1E0AF2780056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Injectorator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.Injectorator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Injectorator/Injectorator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BB356A5C1E0AF2780056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Injectorator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.Injectorator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Injectorator/Injectorator-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BB356ADB1E0B09000056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = InjectionHelper/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					InjectionHelper/Info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"InjectionHelper/Info-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BB356ADC1E0B09000056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = InjectionHelper/Info.plist;
+				INFOPLIST_PREPROCESS = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					InjectionHelper/Info.plist,
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"InjectionHelper/Info-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BB356B001E0B0B8A0056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = InjectionBootstrap/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.InjectionBootstrap;
+				PRODUCT_NAME = Bootstrap;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BB356B011E0B0B8A0056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = InjectionBootstrap/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.InjectionBootstrap;
+				PRODUCT_NAME = Bootstrap;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		BB356BD51E0C4C0F0056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB356BD61E0C4C0F0056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB5A60BE1E22211900B6C1D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB5A60BF1E22211900B6C1D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB356A481E0AF2780056B10F /* Build configuration list for PBXProject "Injectorator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356A581E0AF2780056B10F /* Debug */,
+				BB356A591E0AF2780056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356A5A1E0AF2780056B10F /* Build configuration list for PBXNativeTarget "Injection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356A5B1E0AF2780056B10F /* Debug */,
+				BB356A5C1E0AF2780056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356ADA1E0B09000056B10F /* Build configuration list for PBXNativeTarget "com.johnholdsworth.Injectorator.Helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356ADB1E0B09000056B10F /* Debug */,
+				BB356ADC1E0B09000056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356AFF1E0B0B8A0056B10F /* Build configuration list for PBXNativeTarget "InjectionBootstrap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356B001E0B0B8A0056B10F /* Debug */,
+				BB356B011E0B0B8A0056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356BD71E0C4C130056B10F /* Build configuration list for PBXNativeTarget "injectSource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356BD51E0C4C0F0056B10F /* Debug */,
+				BB356BD61E0C4C0F0056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB5A60BD1E22211900B6C1D9 /* Build configuration list for PBXNativeTarget "tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB5A60BE1E22211900B6C1D9 /* Debug */,
+				BB5A60BF1E22211900B6C1D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB356A451E0AF2780056B10F /* Project object */;
+}

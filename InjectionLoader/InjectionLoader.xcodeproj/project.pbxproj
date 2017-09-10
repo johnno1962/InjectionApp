@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB356B701E0B1A5C0056B10F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BB356B6F1E0B1A5C0056B10F /* libz.tbd */; };
+		BB356B741E0B1AAE0056B10F /* BundleContents.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356B721E0B1AAE0056B10F /* BundleContents.mm */; };
+		BB356B751E0B1AAE0056B10F /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB356B731E0B1AAE0056B10F /* Info.plist */; };
+		BB356B931E0B807B0056B10F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB356B921E0B807B0056B10F /* UIKit.framework */; };
+		BB356BC31E0B93CC0056B10F /* Xprobe+Service.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356BC21E0B93CC0056B10F /* Xprobe+Service.mm */; };
+		BB356BCC1E0BC3FE0056B10F /* Xtrace.mm in Sources */ = {isa = PBXBuildFile; fileRef = BB356BCA1E0BC3FE0056B10F /* Xtrace.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB356B531E0B184C0056B10F /* InjectionLoader.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjectionLoader.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB356B6F1E0B1A5C0056B10F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BB356B711E0B1AAE0056B10F /* BundleContents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BundleContents.h; sourceTree = SOURCE_ROOT; };
+		BB356B721E0B1AAE0056B10F /* BundleContents.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BundleContents.mm; sourceTree = SOURCE_ROOT; };
+		BB356B731E0B1AAE0056B10F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		BB356B921E0B807B0056B10F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BB356BC21E0B93CC0056B10F /* Xprobe+Service.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "Xprobe+Service.mm"; path = "../../XprobePlugin/Classes/Xprobe+Service.mm"; sourceTree = "<group>"; };
+		BB356BC71E0BC3FE0056B10F /* Xprobe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xprobe.h; path = ../../XprobePlugin/Classes/Xprobe.h; sourceTree = "<group>"; };
+		BB356BC81E0BC3FE0056B10F /* Xprobe.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Xprobe.mm; path = ../../XprobePlugin/Classes/Xprobe.mm; sourceTree = "<group>"; };
+		BB356BC91E0BC3FE0056B10F /* Xtrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xtrace.h; path = ../../XprobePlugin/Classes/Xtrace.h; sourceTree = "<group>"; };
+		BB356BCA1E0BC3FE0056B10F /* Xtrace.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Xtrace.mm; path = ../../XprobePlugin/Classes/Xtrace.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB356B501E0B184C0056B10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356B931E0B807B0056B10F /* UIKit.framework in Frameworks */,
+				BB356B701E0B1A5C0056B10F /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB356B4A1E0B184C0056B10F = {
+			isa = PBXGroup;
+			children = (
+				BB356BC91E0BC3FE0056B10F /* Xtrace.h */,
+				BB356BCA1E0BC3FE0056B10F /* Xtrace.mm */,
+				BB356BC71E0BC3FE0056B10F /* Xprobe.h */,
+				BB356BC81E0BC3FE0056B10F /* Xprobe.mm */,
+				BB356BC21E0B93CC0056B10F /* Xprobe+Service.mm */,
+				BB356B711E0B1AAE0056B10F /* BundleContents.h */,
+				BB356B721E0B1AAE0056B10F /* BundleContents.mm */,
+				BB356B731E0B1AAE0056B10F /* Info.plist */,
+				BB356B541E0B184C0056B10F /* Products */,
+				BB356B6E1E0B1A5C0056B10F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB356B541E0B184C0056B10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB356B531E0B184C0056B10F /* InjectionLoader.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB356B6E1E0B1A5C0056B10F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB356B921E0B807B0056B10F /* UIKit.framework */,
+				BB356B6F1E0B1A5C0056B10F /* libz.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB356B521E0B184C0056B10F /* InjectionLoader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB356B591E0B184C0056B10F /* Build configuration list for PBXNativeTarget "InjectionLoader" */;
+			buildPhases = (
+				BB356B4F1E0B184C0056B10F /* Sources */,
+				BB356B501E0B184C0056B10F /* Frameworks */,
+				BB356B511E0B184C0056B10F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InjectionLoader;
+			productName = InjectionLoader;
+			productReference = BB356B531E0B184C0056B10F /* InjectionLoader.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB356B4B1E0B184C0056B10F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "John Holdsworth";
+				TargetAttributes = {
+					BB356B521E0B184C0056B10F = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9V5A8WE85E;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = BB356B4E1E0B184C0056B10F /* Build configuration list for PBXProject "InjectionLoader" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BB356B4A1E0B184C0056B10F;
+			productRefGroup = BB356B541E0B184C0056B10F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB356B521E0B184C0056B10F /* InjectionLoader */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB356B511E0B184C0056B10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356B751E0B1AAE0056B10F /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB356B4F1E0B184C0056B10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB356BCC1E0BC3FE0056B10F /* Xtrace.mm in Sources */,
+				BB356BC31E0B93CC0056B10F /* Xprobe+Service.mm in Sources */,
+				BB356B741E0B1AAE0056B10F /* BundleContents.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BB356B571E0B184C0056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"INJECTION_PORT=$INJECTION_PORT",
+					"XPROBE_PORT=$XPROBE_PORT",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB356B581E0B184C0056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"INJECTION_PORT=$INJECTION_PORT",
+					"XPROBE_PORT=$XPROBE_PORT",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		BB356B5A1E0B184C0056B10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.InjectionLoader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		BB356B5B1E0B184C0056B10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9V5A8WE85E;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_BUNDLE_IDENTIFIER = com.johnholdsworth.InjectionLoader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB356B4E1E0B184C0056B10F /* Build configuration list for PBXProject "InjectionLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356B571E0B184C0056B10F /* Debug */,
+				BB356B581E0B184C0056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB356B591E0B184C0056B10F /* Build configuration list for PBXNativeTarget "InjectionLoader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB356B5A1E0B184C0056B10F /* Debug */,
+				BB356B5B1E0B184C0056B10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB356B4B1E0B184C0056B10F /* Project object */;
+}

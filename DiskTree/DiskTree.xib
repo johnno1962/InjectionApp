@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="494" customClass="DiskTreeAppDelegate">
+            <connections>
+                <outlet property="webView" destination="533" id="534"/>
+                <outlet property="window" destination="pQA-73-RIy" id="4gr-QM-CK2"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+        <window title="Injection" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" frameAutosaveName="" animationBehavior="default" id="pQA-73-RIy">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="510" height="480"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <view key="contentView" misplaced="YES" id="wmh-bE-mWF">
+                <rect key="frame" x="0.0" y="0.0" width="510" height="480"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView misplaced="YES" id="533">
+                        <rect key="frame" x="0.0" y="0.0" width="510" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12" plugInsEnabled="NO" javaEnabled="NO" javaScriptCanOpenWindowsAutomatically="NO" allowsAnimatedImages="NO" allowsAnimatedImageLooping="NO"/>
+                        <connections>
+                            <outlet property="UIDelegate" destination="494" id="539"/>
+                            <outlet property="downloadDelegate" destination="494" id="535"/>
+                            <outlet property="frameLoadDelegate" destination="494" id="536"/>
+                            <outlet property="policyDelegate" destination="494" id="537"/>
+                            <outlet property="resourceLoadDelegate" destination="494" id="538"/>
+                        </connections>
+                    </webView>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="29" y="-337"/>
+        </window>
+    </objects>
+</document>

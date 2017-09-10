@@ -1,0 +1,101 @@
+<html><head><style>
+
+body, .treeview { font: 12pt -apple-system; background-color: #303238; }
+
+.treeview UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px;
+}
+
+.treeview LI {
+	PADDING-LEFT: 25px; PADDING-TOP: 3px; PADDING-BOTTOM: 2px; LIST-STYLE-TYPE: none; CURSOR: default;
+}
+
+.lopen {
+	BACKGROUND: url(open_folder_orange.png) transparent no-repeat left 1px;
+}
+
+.lclosed {
+	BACKGROUND: url(closed_folder_orange.png) transparent no-repeat left 1px;
+}
+
+.lfile {
+	BACKGROUND: url(document.png) transparent no-repeat left 1px;
+}
+
+.mtab { background-color: #303238; color: #e0e0e0; }
+.dlink { color: #e0e0e0; text-decoration: none; }
+.dlink:hover { text-decoration: underline; }
+
+</style></head><body style='border: 0px; margin: 0px;'>
+
+<table class=mtab width='100%' notheight='100%'>
+<tr><td>&nbsp;
+<tr><td width=75><td>
+<center id=welcome>
+<h2>Disk Usage Tool</h2>
+
+<div style='max-width:400'>
+Disk Usage is a basic tool to locate
+space that can be recovered on your disk drive. Click scan
+to start the process and after all files on your drive
+have been sized a tree view will be dispayed. Click on
+the folder to drill down or on the directory link to open
+in Finder.
+</div>
+
+<p>
+</center>
+<div id=treeDiv class='treeview'></div><p>
+<center>
+
+<a href='scan:/'><img src='scan.png' border=0 onmousedown='this.src="scan2.png";'
+   notonmouseup='this.src="scan.png";' notonmouseout='this.src="scan.png";'></a>
+</center>
+<td width=75>
+<tr><td>&nbsp;
+</table>
+<script>
+
+function toggle(e) {
+	var li = (e||event).srcElement || e.target;
+	var submenu = li.children[1];
+	if ( submenu )
+	  if ((submenu.currentStyle||submenu.style).display == "block") {
+		submenu.style.display = "none";
+		li.className = "lclosed";
+	  }
+	  else {
+		li.className = "lopen";
+		var lis = submenu.children;
+		for (var i = 0; i < lis.length; i++)
+			if ( !lis[i].className )
+				lis[i].className = "lclosed";
+		submenu.style.display = "block";
+	  }
+	if ( e )
+	  e.stopPropagation();
+	else
+	  event.cancelBubble = true;
+}
+
+var start;
+
+function progress(html,dirs,files,bytes) {
+	if ( !start )
+		start = new Date();
+	treeDiv.innerHTML = "<center><div style='font: 8pt Arial;'>Scanned "+
+		"Folders: "+dirs+", Files: "+files+", Bytes: "+bytes+
+		" in "+(new Date().getTime()-start.getTime())/1000.+" seconds."+
+		html+"</div></center>";
+}
+
+function complete(html,when) {
+  if ( when )
+    welcome.innerHTML = "<span style='font: bold 16pt Arial;'>Disk Usage "+when+
+		"</span><br>Click on Folder to drill down or its name to view in Finder.<p>";
+  treeDiv.innerHTML = html;
+  treeDiv.children[0].onclick = toggle;
+  start = null;
+}
+
+</script>

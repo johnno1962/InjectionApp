@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="13196" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13156.6"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13196"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="Integration" customModule="Injection">
@@ -97,7 +97,7 @@
                         <action selector="showConsoleWithSender:" target="iBO-ge-fcE" id="yL7-0i-ERF"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Refactor Swift" hidden="YES" id="qpD-Nx-3dB">
+                <menuItem title="Refactor Swift" id="qpD-Nx-3dB">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="refactorSwiftWithSender:" target="-2" id="wee-W4-dqL"/>

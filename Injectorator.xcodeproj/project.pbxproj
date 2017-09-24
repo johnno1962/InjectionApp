@@ -104,6 +104,7 @@
 		BB5A60B31E221F5C00B6C1D9 /* DiskTree.html in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60B11E221F5C00B6C1D9 /* DiskTree.html */; };
 		BB5A60B41E221F5C00B6C1D9 /* DiskTree.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5A60B21E221F5C00B6C1D9 /* DiskTree.xib */; };
 		BB5A60C81E22220B00B6C1D9 /* tree.c in Sources */ = {isa = PBXBuildFile; fileRef = BB5A60C61E2221EC00B6C1D9 /* tree.c */; };
+		BB63C9D31F7810600048D83B /* InjectUnitTests.pm in Resources */ = {isa = PBXBuildFile; fileRef = BB63C9D21F78105D0048D83B /* InjectUnitTests.pm */; };
 		BB6528321E698C4100B8FB95 /* coverage.rb in Resources */ = {isa = PBXBuildFile; fileRef = BB6528301E698C4100B8FB95 /* coverage.rb */; };
 		BB6528331E698C4100B8FB95 /* Coverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6528311E698C4100B8FB95 /* Coverage.swift */; };
 		BBCE04D81E0E16350097E1E6 /* openBundle.pl in Resources */ = {isa = PBXBuildFile; fileRef = BBCE04D71E0E16350097E1E6 /* openBundle.pl */; };
@@ -317,6 +318,7 @@
 		BB5A60C61E2221EC00B6C1D9 /* tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tree.c; path = DiskTree/tree.c; sourceTree = "<group>"; };
 		BB5A60C91E2222A200B6C1D9 /* objcpp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objcpp.h; path = ../ObjCpp/objcpp.h; sourceTree = "<group>"; };
 		BB5A60CA1E2222A200B6C1D9 /* objstr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = objstr.h; path = ../ObjCpp/objstr.h; sourceTree = "<group>"; };
+		BB63C9D21F78105D0048D83B /* InjectUnitTests.pm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.perl; name = InjectUnitTests.pm; path = ../../injectionforxcode/InjectionPluginLite/InjectUnitTests.pm; sourceTree = "<group>"; };
 		BB6528301E698C4100B8FB95 /* coverage.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = coverage.rb; path = ../../RefactoratorApp/Refactorator/coverage.rb; sourceTree = "<group>"; };
 		BB6528311E698C4100B8FB95 /* Coverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Coverage.swift; path = ../../RefactoratorApp/Refactorator/Coverage.swift; sourceTree = "<group>"; };
 		BB7D5F0D1E15B94200393CA1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				BB356B901E0B75030056B10F /* injectSource.pl */,
 				BBCE04D71E0E16350097E1E6 /* openBundle.pl */,
 				BB356BC41E0B976E0056B10F /* evalCode.pl */,
+				BB63C9D21F78105D0048D83B /* InjectUnitTests.pm */,
 				BB356A5D1E0AF2AC0056B10F /* Injectorator-Bridging-Header.h */,
 				BB356A781E0AF32A0056B10F /* Resources */,
 			);
@@ -865,6 +868,7 @@
 				BB010BDE1E1F3A5600C3AACA /* RemoteCapture.h in Resources */,
 				BB010BDF1E1F3A5600C3AACA /* RemoteHeaders.h in Resources */,
 				BB5A60A31E221EA600B6C1D9 /* closed_folder_orange.png in Resources */,
+				BB63C9D31F7810600048D83B /* InjectUnitTests.pm in Resources */,
 				BB5A60A41E221EA600B6C1D9 /* open_folder_orange.png in Resources */,
 				BB5A60A51E221EA600B6C1D9 /* document.png in Resources */,
 			);

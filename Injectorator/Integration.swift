@@ -46,10 +46,11 @@ class Integration: NSObject {
         xprobePlugin = xprobe
 
         appMenu.item(at: 0)?.submenu = mainMenu
-        #if false
-            appMenu.item(at: 1)?.submenu?.title = "Refactorator"
+        #if swift(>=3.2)
+        appMenu.removeItem(at: 1)
+        statusMenu.item(withTitle: "Refactor Swift")?.isHidden = true
         #else
-            appMenu.removeItem(at: 1)
+        appMenu.item(at: 1)?.submenu?.title = "Refactorator"
         #endif
 
         let statusBar = NSStatusBar.system()
@@ -66,7 +67,7 @@ class Integration: NSObject {
                                                     modifierFlags: NSEventModifierFlags.control.rawValue,
                                                     target: self, action: #selector(injectSource(sender:)), object: nil)
 
-        let expires = Date(timeIntervalSince1970: 1506859538.83959)//timeIntervalSinceNow:(2*31+8)*24*60*60)
+        let expires = Date(timeIntervalSince1970: 1515929737.02325)//timeIntervalSinceNow:(2*31+8)*24*60*60)
         print("If not licensed, this copy will expire on: \(expires) \(expires.timeIntervalSince1970)")
 
         if !appDelegate.licensed && Date() > expires {

@@ -26,7 +26,7 @@ a:visited { color: black; }
     <img width="64" src= "http://johnholdsworth.com/injectionforxcode/injection.png"
     style="position:relative; top:10px;" /> Injection, the Missing Manual</center>
 
-<center>To download the new beta version of Injection <a href= "http://johnholdsworth.com/InjectionII.app.zip">click here</a>.</center>
+<center>To download the new beta version of Injection <a href= "http://johnholdsworth.com/injection.html">click here</a>.</center>
 
 <br>
 
@@ -85,7 +85,7 @@ so you may have to rebuild the project and re-run for your first injection.
 
 <h2>What are the limitations of injection?</h2>
 
-In Objective-C, the limitations are relatively few. You have to be mindfull that your new version of the
+In Objective-C, the limitations are relatively few. You have to be mind-full that your new version of the
 method implementations will be linked against the new version of the class so if there are references to
 static variables or singletons these will be duplicated. In Swift, the same applies and there are additional
 gotcha's about whether a method is "direct dispatched" i.e. statically linked rather than dispatched using
@@ -100,10 +100,11 @@ final as far as the project is concerned and use direct dispatch at the call sit
 <h2>Why isn't my -injected() method being called?</h2>
 
 There are two injected() methods which can be used. A class method +injected() which was easy to implement
-and is called whenever a class is injected. The instance level -injected() has a few caveats. In order to
+and is called whenever a class is injected. As injection uses the Objective-C runtime to locate these methods
+they must be prefixed with @objc from Swift 3.2. The instance level -injected() has a few caveats. In order to
 implement it, injection needs to know all the instances of a class in an application so they can be messaged.
 To do this injection performs a sweep of all instances starting with the UIApplication object, it's windows
-and delegate and all objects pointed to by those objects and so forth recursively. As a result, to receive
+and delegate and all objects pointed to by those objects and so on recursively. As a result, to receive
 the injected message your object needs to be visible from these seeds (which it generally is.) If not, you
 can subscribe to the "INJECTION_BUNDLE_NOTIFICATION" in the notification centre and receive a notification
 with the classes injected. Also as -injected is a dynamic dispatch from Objective-C code so your class will
@@ -111,12 +112,12 @@ need to inherit from NSObject.
 
 <h2>Can I use injection with AppCode?</h2>
 
-Sure, there is a new verison of the AppCode plugin available
+Sure, there is a new version of the AppCode plugin available
 <a href="https://github.com/johnno1962/InjectionApp">here</a>. This requires the project to have been built
 in Xcode at some stage to determine the compile commands for a class and that the injection App is running
 from "/Applications".
 
-<h2>Why does injection require my administrator password?</h2>
+<h2>Why does injection require an administrator password?</h2>
 
 Injecting code between processes as described in the second section above requires administrator privilege
 and to make this available injection installs a very small (36kb) "Helper" binary into
@@ -142,9 +143,9 @@ across anything you feel should be in the FAQ please file a PR on
 
 <h2>What is the current injection license?</h2>
 
-The code in the injection plugin has been licensed to the new InjectionApp under it's own very general terms
-which are currently described in the App's "About Injection" panel for the beta period. Depending on
-interest it may have new a license if it becomes a full fledged product.
+The code in the injection plugin has been licensed to the new InjectionApp under it's MIT license
+which are currently described in the App's "About Injection" panel. Depending on interest, the binary
+distribution may have new a license if it becomes a product.
 
 <h2>What else can the Injection application do?</h2>
 
@@ -179,11 +180,9 @@ view a summary of the longest build times by function with a link to take you to
 
 Finally, though it requires patching your project to use,
 <a href="https://github.com/johnno1962/Remote">Remote Control</a> is included which allows you to control
-an iDeivce from your computer if that's more convenient or for End-to-End testing. Some events require an
+an iDevice from your computer if that's more convenient or for End-to-End testing. Some events require an
 initial tap on the device to capture an event that can be used to forge other events but it generally
-works quite well.</p>
-
-
+works quite well.<p>
 
 <center><img src="http://injectionforxcode.johnholdsworth.com/remote.gif"/></center>
 <td width="12%">

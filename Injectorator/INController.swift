@@ -48,6 +48,10 @@ class INController: INPluginMenuController {
     }
 
     override func xcodeApp() -> String! {
+        if let xcodeApp = NSRunningApplication.runningApplications(withBundleIdentifier: "com.apple.dt.Xcode")
+            .first?.bundleURL?.path {
+            return xcodeApp
+        }
         let appName = project?.xCode?.className.replacingOccurrences(of: "Application", with: "")
         return "/Applications/\(appName ?? "Xcode").app"
     }
